@@ -1,8 +1,18 @@
+import { signOut } from "firebase/auth";
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { NavLink } from "react-router-dom";
+import auth from "../../firebase.init";
 import LogoImg from "../../images/logo.png";
 
 const Navbar = () => {
+  const [user] = useAuthState(auth);
+  console.log(user);
+
+  const logout = () => {
+    signOut(auth);
+  };
+
   return (
     <div>
       <div className="navbar bg-base-100">
@@ -29,7 +39,7 @@ const Navbar = () => {
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <NavLink to="/">Item 1</NavLink>
+                <NavLink to="/">Home</NavLink>
               </li>
               <li tabIndex="0">
                 <a className="justify-between">
@@ -58,12 +68,12 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-         <img className="btn btn-ghost" src={LogoImg} alt="" />
+          <img to="/" className="btn btn-ghost" src={LogoImg} alt="" />
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal p-0">
             <li>
-              <NavLink to="/">Item 1</NavLink>
+              <NavLink to="/">Home</NavLink>
             </li>
             <li tabIndex="0">
               <a>
@@ -93,7 +103,28 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <NavLink to="/login"  className="btn text-neutral btn-ghost bg-primary">Get started</NavLink>
+          {user ? (
+            <button class="btn bg-error text-white btn-ghost" onClick={logout}>
+              Log out
+            </button>
+          ) : (
+            <div class="dropdown dropdown-end">
+              <label tabindex="0" class="btn bg-error text-white btn-ghost">
+                Register
+              </label>
+              <ul
+                tabindex="0"
+                class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
+              >
+                <li>
+                  <NavLink to="/login">LogIn</NavLink>
+                </li>
+                <li className="mt-2">
+                  <NavLink to="/signup">SignUp</NavLink>
+                </li>
+              </ul>
+            </div>
+          )}
         </div>
       </div>
     </div>
