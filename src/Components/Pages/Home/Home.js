@@ -1,12 +1,12 @@
 import React from 'react';
 import Carousel from './Carousel';
-import Parts from './Parts';
+import Tools from './Tools/Tools';
 
 const Home = () => {
     return (
         <div>
            <Carousel/>
-           <Parts/>
+           <Tools/>
         </div>
     );
 };

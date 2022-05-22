@@ -7,8 +7,8 @@ const Carousel = () => {
   return (
     <div className=" bg-neutral">
       <div className="carousel w-full">
-        <div id="slide1" className="carousel-item relative w-full">
-          <img src={BannerImg} className=" w-full" alt="" />
+        <div id="slide1" className="carousel-item relative w-screen ">
+          <img src={BannerImg} className="w-screen" alt="" />
           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
             <a href="#slide4" className="btn btn-circle">
               ❮
@@ -18,8 +18,8 @@ const Carousel = () => {
             </a>
           </div>
         </div>
-        <div id="slide2" className="carousel-item relative w-full">
-          <img src={BannerImg1} className=" w-full" alt="" />
+        <div id="slide2" className="carousel-item relative w-screen">
+          <img src={BannerImg1} className="w-screen" alt="" />
           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
             <a href="#slide1" className="btn btn-circle">
               ❮
@@ -29,8 +29,8 @@ const Carousel = () => {
             </a>
           </div>
         </div>
-        <div id="slide3" className="carousel-item relative w-full">
-          <img src={BannerImg2} className=" w-full" alt="" />
+        <div id="slide3" className="carousel-item relative w-screen">
+          <img src={BannerImg2} className="w-screen" alt="" />
           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
             <a href="#slide2" className="btn btn-circle">
               ❮
