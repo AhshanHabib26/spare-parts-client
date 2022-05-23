@@ -11,11 +11,13 @@ const Tool = ({ product }) => {
   let from = location.state?.from?.pathname || "/";
 
   const handlePurChaseeBtn = () => {
-    const success = window.confirm("Do You Want Update Your Product");
-    if (success) {
+    const success = window.confirm("Do You Want See Your Product Details?");
+    if (success === true) {
       navigate(from, { replace: true });
     } else {
-      return toast("Please Try Again");
+      
+     toast("Please Try Again");
+     
     }
   };
 

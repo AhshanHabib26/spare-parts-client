@@ -2,6 +2,12 @@ import { Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "./App.css";
 import Navbar from "./Components/Common/Navbar";
+import AddReview from "./Components/Dashboard/AddReview";
+import AllUser from "./Components/Dashboard/AllUser";
+import Dashboard from "./Components/Dashboard/Dashboard";
+import MyOrders from "./Components/Dashboard/MyOrders";
+import MyProfile from "./Components/Dashboard/MyProfile";
+import PageNotFound from "./Components/PageNotFound/PageNotFound";
 import Home from "./Components/Pages/Home/Home";
 import Purchase from "./Components/Pages/Purchase/Purchase";
 import Login from "./Components/Pages/Register/Login";
@@ -17,6 +23,12 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/login" element={<Login/>}/>
         <Route path="/signup" element={<SignUp/>}/>
+        <Route path="/dashboard" element={<Dashboard></Dashboard>}>
+          <Route index element={<MyOrders/>}/>
+          <Route path="addreview" element={<AddReview/>}/>
+          <Route path="myprofile" element={<MyProfile/>}/>
+          <Route path="alluser" element={<AllUser/>}/>
+        </Route>
         <Route
           path="purchase/:id"
           element={
@@ -25,6 +37,8 @@ function App() {
             </RequireAuth>
           }
         />
+
+        <Route path="*" element={<PageNotFound/>}/>
       </Routes>
       <ToastContainer />
     </div>

@@ -7,10 +7,11 @@ import LogoImg from "../../images/logo.png";
 
 const Navbar = () => {
   const [user] = useAuthState(auth);
-  console.log(user);
+ 
 
   const logout = () => {
     signOut(auth);
+    localStorage.removeItem('accessToken')
   };
 
   return (
@@ -75,30 +76,17 @@ const Navbar = () => {
             <li>
               <NavLink to="/">Home</NavLink>
             </li>
-            <li tabIndex="0">
-              <a>
-                Parent
-                <svg
-                  className="fill-current"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
-                </svg>
-              </a>
-              <ul className="p-2">
+
+            {user && (
+              <>
                 <li>
-                  <NavLink to="/submenu">Submenu 1</NavLink>
+                  <NavLink to="/dashboard">Dashboard</NavLink>
                 </li>
-                <li>
-                  <NavLink to="/submenu1">Submenu 2</NavLink>
-                </li>
-              </ul>
-            </li>
+              </>
+            )}
+
             <li>
-              <NavLink to="/submenu2">Item 3</NavLink>
+              <NavLink to="/blog">Blog</NavLink>
             </li>
           </ul>
         </div>
@@ -125,6 +113,22 @@ const Navbar = () => {
               </ul>
             </div>
           )}
+          <label for="my-dashboard-btn" tabIndex="1" className="btn btn-ghost lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h8m-8 6h16"
+              />
+            </svg>
+          </label>
         </div>
       </div>
     </div>

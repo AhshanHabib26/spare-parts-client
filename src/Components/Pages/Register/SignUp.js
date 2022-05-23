@@ -1,50 +1,49 @@
 import React, { useEffect } from "react";
-import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
+import {
+  useCreateUserWithEmailAndPassword,
+  useSignInWithGoogle,
+} from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import auth from "../../../firebase.init";
+import useToken from "../../../Hooks/useToken";
 import Spinner from "../../Spinner/Spinner";
 
 const SignUp = () => {
   const { register, handleSubmit } = useForm();
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth);
+  const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
   const location = useLocation();
   const navigate = useNavigate();
+  const [token] = useToken(user || gUser)
+
   let from = location.state?.from?.pathname || "/";
 
   useEffect(() => {
-    if (user) {
+    if (token) {
       navigate(from, { replace: true });
-      toast.success("Welcome, Join Our Comunity!!!");
+      toast.success("Welcome, Join Our Community!!!");
     }
   });
 
-  if (loading) {
+  useEffect( () =>{
+    if (error || gError) {
+      return toast("Please Try Again");
+    }
+   })
+
+  if (loading || gLoading) {
     return <Spinner />;
   }
 
-  if (error) {
-    return toast("Please Try Again");
-  }
+
 
   const onSubmit = (data) => {
-    fetch("https://motor-parts-263.herokuapp.com/user", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(data),
-    })
-      .then((res) => res.json())
-      .then((result) => {
-        
-          console.log(result);
-        
-      });
 
     createUserWithEmailAndPassword(data.Email, data.Password);
+    
   };
 
   return (
@@ -99,6 +98,18 @@ const SignUp = () => {
                     value="Signup"
                   />
                 </form>
+
+                <div class="divider">OR</div>
+
+                <div className=" grid grid-cols-2 gap-x-6">
+                  <button
+                    onClick={() => signInWithGoogle()}
+                    class="btn btn-error"
+                  >
+                    Google
+                  </button>
+                  <button class="btn btn-primary">Github</button>
+                </div>
               </div>
             </div>
           </div>

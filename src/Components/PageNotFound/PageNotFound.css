@@ -1,0 +1,9 @@
+.pageBack {
+  border: 0;
+  outline: none;
+  background-color: rgb(255, 131, 109);
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: rgb(250, 253, 255);
+}

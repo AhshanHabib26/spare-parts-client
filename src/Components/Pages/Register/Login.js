@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import { useSignInWithEmailAndPassword, useSignInWithGoogle } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import auth from "../../../firebase.init";
+import useToken from "../../../Hooks/useToken";
 import Spinner from "../../Spinner/Spinner";
 
 const Login = () => {
@@ -17,24 +18,28 @@ const Login = () => {
     loading,
     error,
   ] = useSignInWithEmailAndPassword(auth);
+  const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
   const location = useLocation();
   const navigate = useNavigate();
+  const [token] = useToken(user || gUser)
+
+  
   let from = location.state?.from?.pathname || "/";
 
   useEffect(() => {
-    if (user) {
+    if (token) {
       navigate(from, { replace: true });
       toast.success("Welcome, Back!!");
     }
   });
 
   useEffect( () =>{
-    if (error) {
+    if (error || gError) {
        toast("Please Try Again");
     }
   })
 
-  if (loading) {
+  if (loading || gLoading) {
     return <Spinner />;
   }
 
@@ -88,6 +93,17 @@ const Login = () => {
                   />
                   <input className="btn btn-ghost bg-primary text-white" type="submit" value="Login" />
                 </form>
+                <div class="divider">OR</div>
+
+                <div className=" grid grid-cols-2 gap-x-6">
+                  <button
+                    onClick={() => signInWithGoogle()}
+                    class="btn btn-error"
+                  >
+                    Google
+                  </button>
+                  <button class="btn btn-primary">Github</button>
+                </div>
               </div>
             </div>
           </div>
