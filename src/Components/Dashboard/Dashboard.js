@@ -28,6 +28,7 @@ const Dashboard = () => {
             <li>
               <NavLink className="my-2" to="/dashboard/addreview">Add Review</NavLink>
               <NavLink to="/dashboard/myprofile">My Profile</NavLink>
+            
              { admin && <NavLink to="/dashboard/alluser">All User</NavLink>}
              
               

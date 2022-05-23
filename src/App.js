@@ -7,6 +7,7 @@ import AllUser from "./Components/Dashboard/AllUser";
 import Dashboard from "./Components/Dashboard/Dashboard";
 import MyOrders from "./Components/Dashboard/MyOrders";
 import MyProfile from "./Components/Dashboard/MyProfile";
+import Payment from "./Components/Dashboard/Payment";
 import PageNotFound from "./Components/PageNotFound/PageNotFound";
 import Home from "./Components/Pages/Home/Home";
 import Purchase from "./Components/Pages/Purchase/Purchase";
@@ -28,6 +29,7 @@ function App() {
           <Route path="addreview" element={<AddReview/>}/>
           <Route path="myprofile" element={<MyProfile/>}/>
           <Route path="alluser" element={<AllUser/>}/>
+          <Route path="payment/:id" element={<Payment/>}/>
         </Route>
         <Route
           path="purchase/:id"
