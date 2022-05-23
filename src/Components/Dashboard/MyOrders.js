@@ -37,9 +37,9 @@ const MyOrders = () => {
   return (
     <div className=" my-8 mx-4">
       <h1 className="my-4 text-xl text-error font-semibold">
-        MY Orders : {orders.length}
+        Your Orders :  {orders.length}
       </h1>
-      <div className=" grid grid-cols-1 lg:grid-cols-3 gap-5">
+      <div className=" grid grid-cols-1 lg:grid-cols-2 gap-5">
         {orders.map((order) => (
           <MyOrder order={order} key={order.key} />
         ))}

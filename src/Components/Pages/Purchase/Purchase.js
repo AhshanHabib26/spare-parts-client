@@ -8,7 +8,7 @@ const Purchase = () => {
   const { id } = useParams();
   const [item, setItem] = useState({});
   const [user] = useAuthState(auth);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   useEffect(() => {
     const url = `https://motor-parts-263.herokuapp.com/product/${id}`;
@@ -27,6 +27,8 @@ const Purchase = () => {
 
     const Name = e.target.Name.value;
     const Email = e.target.Email.value;
+    const userName = e.target.CustomerName.value
+    const address = e.target.Address.value
 
     if (Quantity <= 0) {
       toast.warning("Your Order Quantity Items Is Blank!");
@@ -38,9 +40,12 @@ const Purchase = () => {
       const data = {
         Name: Name,
         Email: Email,
+        UserName: userName,
+        Address: address,
         Price: item.Price,
         Quantity: Quantity,
         TotalAmount: totalCost,
+
       };
 
       fetch("https://motor-parts-263.herokuapp.com/userproducts", {
@@ -53,9 +58,10 @@ const Purchase = () => {
         .then((res) => res.json())
         .then((result) => {
           if (result.insertedId) {
-            toast.success(`Your Order Successfully Added: Payable Amount $ ${totalCost}`);
-            navigate('/')
-            
+            toast.success(
+              `Your Order Successfully Added: Payable Amount $ ${totalCost}`
+            );
+            navigate("/");
           }
         });
     }
@@ -127,23 +133,44 @@ const Purchase = () => {
                     class="input input-bordered my-5"
                   />
                 </div>
-                <div class="form-control">
-                  <input
-                    type="text"
-                    name="Price"
-                    readOnly
-                    value={`$ ${item.Price} Unit Price`}
-                    class="input input-bordered"
-                  />
+                <div className="flex items-center justify-between">
+                  <div class="form-control">
+                    <input
+                      type="text"
+                      name="Price"
+                      readOnly
+                      value={`$ ${item.Price} Unit Price`}
+                      class="input input-bordered text-error text-md font-semibold"
+                    />
+                  </div>
+                  <div class="form-control">
+                    <input
+                      type="text"
+                      readOnly
+                      name="AvailableQunatity"
+                      value={`$ ${item.AvailableQunatity} Available Quantity`}
+                      class="input input-bordered text-warning font-semibold my-4"
+                    />
+                  </div>
                 </div>
-                <div class="form-control">
-                  <input
-                    type="text"
-                    name="AvailableQunatity"
-                    value={`$ ${item.AvailableQunatity} Available Quantity`}
-                    class="input input-bordered my-4"
-                  />
-                </div>
+                  <div class="form-control">
+                    <input
+                      type="text"
+                      name="CustomerName"
+                      required
+                      placeholder="Enter Your Name"
+                      class="input input-bordered"
+                    />
+                  </div>
+                  <div class="form-control">
+                    <input
+                      type="text"
+                      name="Address"
+                      required
+                      placeholder="Enter Your Address"
+                      class="input input-bordered my-4"
+                    />
+                  </div>
                 <div class="form-control">
                   <input
                     type="number"
