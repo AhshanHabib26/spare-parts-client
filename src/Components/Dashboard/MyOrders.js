@@ -12,7 +12,7 @@ const MyOrders = () => {
 
   useEffect(() => {
     const email = user?.email;
-    const url = `http://localhost:5000/userproducts?email=${email}`;
+    const url = `https://motor-parts-263.herokuapp.com/userproducts?email=${email}`;
     if (user) {
       fetch(url, {
         method: "GET",
