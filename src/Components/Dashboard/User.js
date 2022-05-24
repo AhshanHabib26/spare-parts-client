@@ -2,7 +2,7 @@ import React from "react";
 import { toast } from "react-toastify";
 
 const User = ({ user, index }) => {
-  const { Email, role } = user;
+  const { Email, role , _id} = user;
   const handleUserAdmin = () => {
     fetch(`https://motor-parts-263.herokuapp.com/user/admin/${Email}`, {
       method: "PUT",
@@ -21,8 +21,24 @@ const User = ({ user, index }) => {
         if (data.modifiedCount > 0) {
           toast.success("Successfully Make An Admin");
         }
-      });
+      });  
   };
+
+  const handaleDelete =(id) =>{
+    const procceed = window.confirm("Are You Sure You Want To Delete?");
+    if (procceed) {
+      const url = `https://motor-parts-263.herokuapp.com/user/${id}`;
+      fetch(url, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.deletedCount > 0) {
+            toast("Delete Successfully!");
+          }
+        });
+    }
+  }
 
   return (
     <tr>
@@ -38,7 +54,7 @@ const User = ({ user, index }) => {
         )}
       </td>
       <td>
-        <button class="btn btn-error btn-sm">Delete</button>
+        <button onClick={() => handaleDelete(_id)} class="btn btn-error btn-sm">Delete</button>
       </td>
     </tr>
   );

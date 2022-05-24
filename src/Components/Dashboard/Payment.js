@@ -21,13 +21,15 @@ const Payment = () => {
   }
 
   return (
-    <div class="card w-4/6 mt-12 mx-auto bg-base-100 shadow-2xl">
-      <div class="card-body">
-        <Elements stripe={stripePromise}>
-          <CheckoutForm data={data} />
-        </Elements>
+    < >
+      <div class="card   w-4/6  mt-44 mx-auto bg-emerald-100 shadow-2xl">
+        <div class="card-body">
+          <Elements stripe={stripePromise}>
+            <CheckoutForm data={data} />
+          </Elements>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
