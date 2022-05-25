@@ -8,7 +8,7 @@ const ManageProducts = () => {
   const handleDelete = (id) =>{
     const procced = window.confirm('Are You Sure Want To Delete')
     if(procced){
-      const url = `http://localhost:5000/product/${id}`
+      const url = `https://motor-parts-263.herokuapp.com/product/${id}`
       fetch(url, {
         method: "DELETE",
       })

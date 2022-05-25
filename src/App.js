@@ -13,6 +13,7 @@ import MyProfile from "./Components/Dashboard/MyProfile";
 import Payment from "./Components/Dashboard/Payment";
 import UpdateProfile from "./Components/Dashboard/UpdateProfile";
 import PageNotFound from "./Components/PageNotFound/PageNotFound";
+import Blogs from "./Components/Pages/Blog/Blogs";
 import Footer from "./Components/Pages/Home/Footer";
 import Home from "./Components/Pages/Home/Home";
 import Purchase from "./Components/Pages/Purchase/Purchase";
@@ -27,6 +28,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/blog" element={<Blogs/>} />
         <Route path="/login" element={<Login/>}/>
         <Route path="/signup" element={<SignUp/>}/>
         <Route path="/dashboard" element={<Dashboard></Dashboard>}>
