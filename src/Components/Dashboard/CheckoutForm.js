@@ -11,7 +11,7 @@ const CheckoutForm = ({ data }) => {
   const { _id, TotalAmount, Email, UserName } = data;
 
   useEffect(() => {
-    fetch("http://localhost:5000/create-payment-intent", {
+    fetch("https://motor-parts-263.herokuapp.com/create-payment-intent", {
       method: "POST",
       headers: {
         "content-type": "application/json",

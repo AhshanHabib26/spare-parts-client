@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import auth from "../../../firebase.init";
 import { useAuthState } from "react-firebase-hooks/auth";
@@ -9,6 +9,7 @@ const Purchase = () => {
   const [item, setItem] = useState({});
   const [user] = useAuthState(auth);
   const navigate = useNavigate();
+  const buttonRef = useRef();
 
   useEffect(() => {
     const url = `https://motor-parts-263.herokuapp.com/product/${id}`;
@@ -16,6 +17,8 @@ const Purchase = () => {
       .then((res) => res.json())
       .then((data) => setItem(data));
   }, []);
+
+  
 
   const handaleOrderBtn = (e) => {
     const orderQuantity = Number(item.MinOrder);
@@ -27,25 +30,27 @@ const Purchase = () => {
 
     const Name = e.target.Name.value;
     const Email = e.target.Email.value;
-    const userName = e.target.CustomerName.value
-    const address = e.target.Address.value
+    const userPhone = e.target.Phone.value;
+    const address = e.target.Address.value;
 
     if (Quantity <= 0) {
       toast.warning("Your Order Quantity Items Is Blank!");
     } else if (orderQuantity > newQuantity) {
+      buttonRef.current.disabled = true;
       toast.error(` Please Order Upto Minimum: ${item.MinOrder} Items`);
     } else if (AvalQuantity < newQuantity) {
+      buttonRef.current.disabled = true;
       toast.error(` Please Order Maximum : ${item.AvailableQunatity} Items`);
     } else {
+      buttonRef.current.disabled = false;
       const data = {
         Name: Name,
         Email: Email,
-        UserName: userName,
+        userPhone: userPhone,
         Address: address,
         Price: item.Price,
         Quantity: Quantity,
         TotalAmount: totalCost,
-
       };
 
       fetch("https://motor-parts-263.herokuapp.com/userproducts", {
@@ -153,24 +158,24 @@ const Purchase = () => {
                     />
                   </div>
                 </div>
-                  <div class="form-control">
-                    <input
-                      type="text"
-                      name="CustomerName"
-                      required
-                      placeholder="Enter Your Name"
-                      class="input input-bordered"
-                    />
-                  </div>
-                  <div class="form-control">
-                    <input
-                      type="text"
-                      name="Address"
-                      required
-                      placeholder="Enter Your Address"
-                      class="input input-bordered my-4"
-                    />
-                  </div>
+                <div class="form-control">
+                  <input
+                    type="text"
+                    name="Phone"
+                    required
+                    placeholder="Enter Your Mobile Number"
+                    class="input input-bordered"
+                  />
+                </div>
+                <div class="form-control">
+                  <input
+                    type="text"
+                    name="Address"
+                    required
+                    placeholder="Enter Your Address"
+                    class="input input-bordered my-4"
+                  />
+                </div>
                 <div class="form-control">
                   <input
                     type="number"
@@ -180,7 +185,12 @@ const Purchase = () => {
                   />
                 </div>
                 <div class="form-control mt-6">
-                  <button class="btn btn-primary">Order Confirm</button>
+                  <button
+                    ref={buttonRef}
+                    class="btn btn-primary"
+                  >
+                    Order Confirm
+                  </button>
                 </div>
               </form>
             </div>

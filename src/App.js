@@ -8,7 +8,9 @@ import Dashboard from "./Components/Dashboard/Dashboard";
 import MyOrders from "./Components/Dashboard/MyOrders";
 import MyProfile from "./Components/Dashboard/MyProfile";
 import Payment from "./Components/Dashboard/Payment";
+import UpdateProfile from "./Components/Dashboard/UpdateProfile";
 import PageNotFound from "./Components/PageNotFound/PageNotFound";
+import Footer from "./Components/Pages/Home/Footer";
 import Home from "./Components/Pages/Home/Home";
 import Purchase from "./Components/Pages/Purchase/Purchase";
 import Login from "./Components/Pages/Register/Login";
@@ -30,6 +32,7 @@ function App() {
           <Route path="myprofile" element={<MyProfile/>}/>
           <Route path="alluser" element={<AllUser/>}/>
           <Route path="payment/:id" element={<Payment/>}/>
+          <Route path="myprofile/update" element={<UpdateProfile/>}/>
         </Route>
         <Route
           path="purchase/:id"
@@ -42,6 +45,7 @@ function App() {
 
         <Route path="*" element={<PageNotFound/>}/>
       </Routes>
+      <Footer/>
       <ToastContainer />
     </div>
   );

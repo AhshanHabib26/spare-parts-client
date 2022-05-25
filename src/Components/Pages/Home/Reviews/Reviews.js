@@ -1,11 +1,14 @@
-import React from 'react';
-import useProduct from '../../../../Hooks/useProduct';
+import React, { useEffect, useState } from 'react';
 import Review from './Review';
 
 const Reviews = () => {
+    const [reviews, setReviews] = useState([])
 
-    const [products] = useProduct()
-    const customProducts = products.slice(0, 6)
+    useEffect( () =>{
+        fetch('https://motor-parts-263.herokuapp.com/review')
+        .then( res => res.json())
+        .then(data => setReviews(data))
+    },[])
 
     return (
         <div className='mx-4 md:mx-8'>
@@ -15,7 +18,7 @@ const Reviews = () => {
             </div>
             <div className='mx-auto grid grid-cols-1 md:grid-cols-3 gap-4'>
                 {
-                  customProducts.map( review => <Review
+                  reviews.map( review => <Review
                   
                     review={review}
                     key={review._id}

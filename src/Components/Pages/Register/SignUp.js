@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import {
   useCreateUserWithEmailAndPassword,
   useSignInWithGoogle,
+  useUpdateProfile,
 } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
@@ -14,10 +15,11 @@ const SignUp = () => {
   const { register, handleSubmit } = useForm();
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth);
+  const [updateProfile, updating, updateError] = useUpdateProfile(auth);
   const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
   const location = useLocation();
   const navigate = useNavigate();
-  const [token] = useToken(user || gUser)
+  const [token] = useToken(user || gUser);
 
   let from = location.state?.from?.pathname || "/";
 
@@ -28,21 +30,36 @@ const SignUp = () => {
     }
   });
 
-  useEffect( () =>{
+  useEffect(() => {
     if (error || gError) {
       return toast("Please Try Again");
     }
-   })
+  });
 
   if (loading || gLoading) {
     return <Spinner />;
   }
 
+  const onSubmit = async (data) => {
+    const userData = {
+      Name: data.Name,
+      Email: data.Email,
+    };
 
+    fetch("http://localhost:5000/userInfo", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(userData),
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        console.log(result)
+      });
 
-  const onSubmit = (data) => {
-
-    createUserWithEmailAndPassword(data.Email, data.Password);
+    await createUserWithEmailAndPassword(data.Email, data.Password);
+    await updateProfile({ displayName: data.Name });
     
   };
 

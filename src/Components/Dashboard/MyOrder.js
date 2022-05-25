@@ -1,8 +1,28 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const MyOrder = ({ order }) => {
   const { Name,  Price, Quantity, TotalAmount, _id } = order;
+
+  const handleDeleteItem = (id) =>{
+    const confirm = window.confirm('Are You Sure Want To Delete')
+    if (confirm) {
+      console.log(id);
+      const url = `https://motor-parts-263.herokuapp.com/userproducts/${id}`;
+      fetch(url, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.deletedCount > 0) {
+            toast("Delete Successfully!");
+          }
+        });
+    }
+  }
+
+
   return (
     <div>
       <div class="card h-[250px] w-full bg-neutral text-neutral-content">
@@ -16,10 +36,10 @@ const MyOrder = ({ order }) => {
           <div class="card-actions mt-4  justify-evenly">
             { (Price && !order.paid) && <>
               <Link to={`/dashboard/payment/${_id}`} class="btn btn-primary w-1/3">Pay</Link>
-              <button class="btn btn-error w-1/3">Cencel</button>
+              <button  onClick={ () => handleDeleteItem(_id)}  class="btn btn-error modal-button w-1/3">Cencel</button>
             </>}
             { (Price && order.paid) && <>
-              <button class="btn disabled btn-primary w-1/3">Paid</button>
+              <button  class="btn disabled btn-primary w-1/3">Paid</button>
             </> }
             
           </div>

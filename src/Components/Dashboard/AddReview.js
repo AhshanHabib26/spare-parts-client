@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 const imageAPIKey = "672a876c49a0abb50cb4f6680c0f73d4";
 
 const AddReview = () => {
-  const { formState: { errors }, register, handleSubmit, reset } = useForm();
+  const { register, handleSubmit, reset } = useForm();
   const date = new Date();
   const today = date.toLocaleString();
 
@@ -23,8 +23,9 @@ const AddReview = () => {
           const Image = response.data.url;
           const dataInfo = {
             Name: data.Name,
-            Description: data.Comment,
+            Review: data.Comment,
             Image: Image,
+            Rating: data.Rating,
             Date: today,
           };
           console.log(dataInfo);
@@ -67,6 +68,12 @@ const AddReview = () => {
                 placeholder="Your Name"
                 class="input input-bordered w-full max-w-screen-sm"
                 {...register("Name", { required: true })}
+              />
+              <input
+                placeholder="Rating Us (1 to 5)"
+                type='number'
+                class="input input-bordered w-full max-w-screen-sm"
+                {...register("Rating", { min: 1, max: 6 }, { required: true })}
               />
               <input
                 placeholder="Your Comment"
