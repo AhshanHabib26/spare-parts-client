@@ -2,9 +2,12 @@ import { Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "./App.css";
 import Navbar from "./Components/Common/Navbar";
+import AddProduct from "./Components/Dashboard/AddProduct";
 import AddReview from "./Components/Dashboard/AddReview";
 import AllUser from "./Components/Dashboard/AllUser";
 import Dashboard from "./Components/Dashboard/Dashboard";
+import ManageOrder from "./Components/Dashboard/ManageOrder";
+import ManageProducts from "./Components/Dashboard/ManageProducts";
 import MyOrders from "./Components/Dashboard/MyOrders";
 import MyProfile from "./Components/Dashboard/MyProfile";
 import Payment from "./Components/Dashboard/Payment";
@@ -33,6 +36,9 @@ function App() {
           <Route path="alluser" element={<AllUser/>}/>
           <Route path="payment/:id" element={<Payment/>}/>
           <Route path="myprofile/update" element={<UpdateProfile/>}/>
+          <Route path="manage-product" element={<ManageProducts/>}/>
+          <Route path='manage-order' element={<ManageOrder/>}/>
+          <Route path="add-product" element={<AddProduct/>}/>
         </Route>
         <Route
           path="purchase/:id"

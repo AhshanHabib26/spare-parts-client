@@ -20,7 +20,7 @@ const MyProfile = () => {
   const userEmail = user?.email;
 
   useEffect(() => {
-    const url = `http://localhost:5000/userInfo/${userEmail}`;
+    const url = `https://motor-parts-263.herokuapp.com/userInfo/${userEmail}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setUserData(data));

@@ -36,7 +36,7 @@ const UpdateProfile = () => {
           };
           console.log(dataInfo);
 
-          const url = `http://localhost:5000/userInfo/${userEmail}`;
+          const url = `https://motor-parts-263.herokuapp.com/userInfo/${userEmail}`;
           fetch(url, {
             method: "PUT",
             headers: {
