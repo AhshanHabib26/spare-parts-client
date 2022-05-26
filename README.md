@@ -2,28 +2,43 @@
 ### SpareParts Design By Ahshan Habib
 
 ## Site Live Link: 
-Explore Live Site  **[Click Here](https://car-house-c5294.web.app/)**
+Explore Live Site Link:   **[Click Here](https://motor-parts-8a0ad.web.app/)**
 
 ## Project Details
- * Project Name: CarHouse
- * Technology: **HTML5**, **CSS3**, **React JS**, **React Bootstrap**, **React Icons**, **Toastify**, **React Router**
+ * Project Name: Spare Parts
+ * Technology: **HTML5**, **CSS3**, **React JS**, **Tailwind**, **Flat Icons**, **Toastify**, **React Router**, **Daisy UI Component Libary**, **JWT Token**
+
  * Authentications: **Firebase**, **React Firbase Hook**
+
  * Hosting: 
     * Client: **Github**, **Firebase** 
     * Server: **NodeJS**, **ExpressJS**, **MongoDB** ,**Heroku**
+
  * Project Details:
-    * CarHouse WareHouse
-    * Description:  CarHouse Website Provide Best Product Store website. Here You Can Add Product And Update And Also User Based Add Product And Find Out Product . I Also Use Authentication And JWT Methods To Secure User Info And Give An Best User Friendly Flavour .
+    * Spare Parts
+    * Description: This Is About **Spare Parts** Manufacturing Accessories Distribution And Selling Website. Here You Can Buy Any Auto Spare Parts / Tools As You Want. Every Product Has Min Quantity and Available Quantity With Evrey Product Unit / Items Single Price. You Must Signup / Login Visit This Website. When You Orderd Any Products You Able To Paid Any International Card. For Every User Have a Poweful Dashboard, My Profile, My Order and Add Review Pages. Feel Free And Explore Such An Awesome Website. 
     * Total 8 Section
       * Header Section
-      * Home Section
-      * Blogs Section
-      * Sign In Section
-      * Sign Up Section
-      * Social Login & Signup Section
-      * Password Reset Page
-      * Manage Items
-      * My Items
-    * Not Found Page 
-    * Footer Section
-    * Fully Responsive
+      * Banner Section
+      * All Spare Parts Section
+      * Summary Section
+      * Review Section
+      * Subscribe Section
+      * Product Request Section
+      * Footer Section
+    
+    * Sign in Page
+    * Sign Up Page
+    * Blog Page
+    * Portfolio Page
+    * Dashboard
+        * For User
+            * Order Page
+            * My Profile Page
+            * Review Page
+        * For Admin (Protected Route - Access Only Admin)
+            * My Profile Page
+            * Manage All Orders
+            * Add Product Page
+            * All User Page
+            * Manage Products
