@@ -27,8 +27,8 @@ Explore Live Site Link:   **[Click Here](https://motor-parts-8a0ad.web.app/)**
       * Product Request Section
       * Footer Section
     
-    * Sign in Page
-    * Sign Up Page
+    * Signin Page
+    * SignUp Page
     * Blog Page
     * Portfolio Page
     * Dashboard

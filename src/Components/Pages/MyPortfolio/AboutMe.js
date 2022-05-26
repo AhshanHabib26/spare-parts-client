@@ -7,7 +7,7 @@ const AboutMe = () => {
       <div class="hero min-h-screen bg-slate-200">
         <div class="hero-content flex-col lg:flex-row">
           <div>
-            <h1 class="text-7xl italic uppercase text-opacity-20 text-primary font-bold text-center ">
+            <h1 class="text-4xl lg:text-7xl italic uppercase text-opacity-20 text-primary font-bold text-center ">
               About Me
             </h1>
             <p class="py-6  text-center">
@@ -24,19 +24,19 @@ const AboutMe = () => {
                   <p className=" text-lg  text-slate-800 font-semibold text-opacity-60">
                     Name: Ahshan Habib
                   </p>
-                  <p className="my-4 text-lg  text-slate-800 font-semibold text-opacity-60">
+                  <p className=" text-lg  text-slate-800 font-semibold text-opacity-60">
                     Email: habib.net27@gmail.com
                   </p>
                   <p className=" text-lg  text-slate-800 font-semibold text-opacity-60">
                     Hello: (+880 )-1646418365
                   </p>
 
-                  <button className=" btn w-[160px] btn-error mt-8">
+                  <button className=" btn w-[160px] btn-error mt-4 lg:mt-8">
                     Download Cv
                   </button>
                 </div>
               </div>
-              <div class="card mt-5 lg:mt-0 bg-slate-200">
+              <div class="card mt-[-50px] lg:mt-0 bg-slate-200">
                 <div class="card-body">
                   <h2 class="card-title">Skills & Experience</h2>
                   <div>

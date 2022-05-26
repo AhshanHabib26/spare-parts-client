@@ -50,10 +50,11 @@ const AddProduct = () => {
 
   return (
     <div>
-      <h1 className=" my-5 text-xl font-semibold text-error">Add Product</h1>
+     
       <div>
-        <div class="card w-8/12 mx-auto bg-base-100 shadow-xl">
+        <div class="card  w-11/12  lg:w-10/12 mx-auto bg-base-100 shadow-xl">
           <div class="card-body ">
+          <h1 className=" my-5 text-2xl  font-semibold text-error">Add Product</h1>
             <form
               className="grid grid-cols-1 gap-4"
               onSubmit={handleSubmit(onSubmit)}
@@ -100,7 +101,7 @@ const AddProduct = () => {
                 })}
               />
               <input
-                className="btn btn-primary "
+                className="btn btn-primary w-4/12  "
                 value="Add Product"
                 type="submit"
               />

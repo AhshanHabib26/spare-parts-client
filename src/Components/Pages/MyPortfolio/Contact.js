@@ -10,10 +10,10 @@ const Contact = () => {
     }
   return (
     <div className=" bg-slate-100 pb-16">
-      <h2 class="text-7xl italic uppercase text-opacity-20 text-primary font-bold text-center pt-5 ">
+      <h2 class="text-4xl lg:text-7xl italic uppercase text-opacity-20 text-primary font-bold text-center pt-5 ">
         Contact Us
         <div>
-        <div class="card w-8/12 mx-auto bg-slate-100 ">
+        <div class="card w-11/12 lg:w-8/12 mx-auto bg-slate-100 ">
           <div class="card-body ">
             <form
               className="grid grid-cols-1 gap-4"

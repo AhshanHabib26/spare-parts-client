@@ -7,7 +7,7 @@ import FeedImg from '../../../images/Icons/feedback.png'
 const Feedbacke = () => {
   return (
     <div className=" bg-slate-100">
-      <div className=" grid grid-cols-1 lg:grid-cols-4 gpa-10 mt-24 mx-28 lg:mx-16">
+      <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gpa-10 mt-24 mx-28 lg:mx-16">
         <div class="card w-[250px] h-[250px] bg-slate-200 mb-14 lg:mb-24 shadow-xl">
           <figure class="px-10 pt-10">
             <img

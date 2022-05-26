@@ -12,8 +12,8 @@ const ManageOrder = () => {
 
   return (
     <div>
-      <h1 className=" my-5 text-xl font-semibold text-error">Manage Order</h1>
-      <div className=" grid grid-cols-1 lg:grid-cols-2 gap-5">
+      <h1 className=" my-5 ml-5 lg:ml-0 text-xl font-semibold text-error">Manage Order</h1>
+      <div className=" px-8 lg:px-0 grid grid-cols-1 lg:grid-cols-2 gap-5">
         {" "}
         {orders.map((order) => (
           <Order order={order} key={order._id} />

@@ -26,7 +26,7 @@ const ManageProducts = () => {
 
   return (
     <div>
-      <h1 className='className=" my-5 text-xl font-semibold text-error'>
+      <h1 className='className=" ml-5 lg:ml-0 my-5 text-xl font-semibold text-error'>
         Manage All Products
       </h1>
       <div class="overflow-x-auto">

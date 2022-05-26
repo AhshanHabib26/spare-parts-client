@@ -6,7 +6,7 @@ import TutoHome from "../../../images/TutorHome.png";
 const Project = () => {
   return (
     <div className=" bg-slate-200">
-      <h2 class="text-7xl italic uppercase text-opacity-20 text-primary font-bold text-center pt-5 ">
+      <h2 class="text-4xl lg:text-7xl italic uppercase text-opacity-20 text-primary font-bold text-center pt-5 ">
         My Projects
       </h2>
       <div className=" grid grid-cols-1 lg:grid-cols-3 gap-8 mx-12 py-16">

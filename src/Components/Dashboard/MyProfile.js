@@ -28,7 +28,7 @@ const MyProfile = () => {
 
   return (
     <div>
-      <div className="flex items-center justify-between mr-4">
+      <div className="flex mx-8 lg:mx-0 items-center justify-between mr-4">
         <h1 className="my-4 text-2xl text-error font-semibold">My Profile</h1>
         <div>
           <Link className="btn  hover:text-white" to="update">

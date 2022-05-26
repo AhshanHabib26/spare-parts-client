@@ -11,8 +11,8 @@ const Subscribe = () => {
             Our Latest <br /> Tools Update And Articles Also Helpful Resources Notify
             Your Inbox!
           </p>
-          <div className="flex mt-4 items-center justify-center">
-            <div class="form-control">
+          <div className="flex  mt-4 items-center justify-center">
+            <div class="form-control px-12 lg:px-0">
               <div class="input-group">
                 <input
                   type="text"
