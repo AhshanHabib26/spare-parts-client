@@ -16,7 +16,7 @@ const Project = () => {
           </figure>
           <div class="card-body items-center justify-center ">
             <p className="flex-grow-0">Web Car Ware House</p>
-            <h2 class="card-title text-center">The Ultimate Bussiness Car Ware House</h2>
+            <h2 class="card-title text-center">The Ultimate Bussiness Car Ware House Services</h2>
             <div>
               <a
                 className=" btn btn-primary mr-2"
@@ -39,7 +39,7 @@ const Project = () => {
           </figure>
           <div class="card-body items-center justify-center">
             <p className=" flex-grow-0">Web Health Solution</p>
-            <h2 class="card-title">See Your Health Solution</h2>
+            <h2 class="card-title text-center">Your Health Solution Assistant Provider</h2>
             <div>
               <a
                 className=" btn btn-primary mr-2"
@@ -62,7 +62,7 @@ const Project = () => {
           </figure>
           <div class="card-body items-center justify-center">
             <p className=" flex-grow-0">Web Education Service</p>
-            <h2 class="card-title">Web Based Education Service</h2>
+            <h2 class="card-title text-center">Web Based Education Service Application</h2>
             <div>
               <a
                 className=" btn btn-primary mr-2"

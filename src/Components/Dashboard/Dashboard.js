@@ -21,34 +21,48 @@ const Dashboard = () => {
           <ul class="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
             {/* <!-- Sidebar content here --> */}
 
-            <li>
-              <NavLink className="mb-2" to="/dashboard/myprofile">
-                My Profile
-              </NavLink>
-
-              {admin ? (
-                <>
+            {admin ? (
+              <>
+                <li>
                   <NavLink to="/dashboard/add-product">Add Product</NavLink>
+                </li>
+                <li>
                   <NavLink className="my-2" to="/dashboard/manage-order">
                     Manage Orders
                   </NavLink>
-
+                </li>
+                <li>
+                  {" "}
                   <NavLink className="my-2" to="/dashboard/manage-product">
                     Manage Products
                   </NavLink>
+                </li>
+                <li>
                   <NavLink to="/dashboard/alluser">All User</NavLink>
-                </>
-              ) : (
-                <>
-                  <li>
-                    <NavLink to="/dashboard">My Orders</NavLink>
-                    <NavLink className="my-2" to="/dashboard/addreview">
-                      Add Review
-                    </NavLink>
-                  </li>
-                </>
-              )}
-            </li>
+                </li>
+                <li>
+                  <NavLink className="mb-2" to="/dashboard/myprofile">
+                    My Profile
+                  </NavLink>
+                </li>
+              </>
+            ) : (
+              <>
+                <li>
+                  <NavLink className="mb-2" to="/dashboard/myprofile">
+                    My Profile
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="/dashboard">My Orders</NavLink>
+                </li>
+                <li>
+                  <NavLink className="my-2" to="/dashboard/addreview">
+                    Add Review
+                  </NavLink>
+                </li>
+              </>
+            )}
           </ul>
         </div>
       </div>

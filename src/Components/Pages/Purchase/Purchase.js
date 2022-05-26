@@ -56,7 +56,7 @@ const Purchase = () => {
       fetch("https://motor-parts-263.herokuapp.com/userproducts", {
         method: "POST",
         headers: {
-          "content-type": "application/json",
+          "content-type": "application/json"
         },
         body: JSON.stringify(data),
       })

@@ -7,11 +7,10 @@ import LogoImg from "../../images/logo.png";
 
 const Navbar = () => {
   const [user] = useAuthState(auth);
- 
 
   const logout = () => {
     signOut(auth);
-    localStorage.removeItem('accessToken')
+    localStorage.removeItem("accessToken");
   };
 
   return (
@@ -42,30 +41,21 @@ const Navbar = () => {
               <li>
                 <NavLink to="/">Home</NavLink>
               </li>
-              <li tabIndex="0">
-                <a className="justify-between">
-                  Parent
-                  <svg
-                    className="fill-current"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
-                  </svg>
-                </a>
-                <ul className="p-2">
+
+              {user && (
+                <>
                   <li>
-                    <NavLink to="/">Submenu 1</NavLink>
+                    <NavLink to="/dashboard">Dashboard</NavLink>
                   </li>
-                  <li>
-                    <NavLink to="/">Submenu 2</NavLink>
-                  </li>
-                </ul>
-              </li>
+                </>
+              )}
+
               <li>
-                <NavLink to="/">Item 3</NavLink>
+                <NavLink to="/blog">Blog</NavLink>
+              </li>
+
+              <li>
+                <NavLink to="/my-portfolio">Portfolio</NavLink>
               </li>
             </ul>
           </div>
@@ -117,7 +107,11 @@ const Navbar = () => {
               </ul>
             </div>
           )}
-          <label for="my-dashboard-btn" tabIndex="1" className="btn btn-ghost lg:hidden">
+          <label
+            for="my-dashboard-btn"
+            tabIndex="1"
+            className="btn btn-ghost lg:hidden"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"

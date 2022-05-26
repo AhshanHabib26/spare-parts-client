@@ -35,6 +35,7 @@ const AddReview = () => {
             method: "POST",
             headers: {
               "content-type": "application/json",
+              authorization: `Bearer ${localStorage.getItem("accessToken")}`
             },
             body: JSON.stringify(dataInfo),
           })
@@ -73,7 +74,7 @@ const AddReview = () => {
                 placeholder="Rating Us (1 to 5)"
                 type='number'
                 class="input input-bordered w-full max-w-screen-sm"
-                {...register("Rating", { min: 1, max: 6 }, { required: true })}
+                {...register("Rating", { min: 5 }, { required: true })}
               />
               <input
                 placeholder="Your Comment"

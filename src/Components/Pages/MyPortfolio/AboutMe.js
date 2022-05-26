@@ -7,7 +7,7 @@ const AboutMe = () => {
       <div class="hero min-h-screen bg-slate-200">
         <div class="hero-content flex-col lg:flex-row">
           <div>
-            <h1 class="text-7xl italic uppercase text-opacity-20 text-primary font-bold text-center mt-0 lg:mt-[-60px] ">
+            <h1 class="text-7xl italic uppercase text-opacity-20 text-primary font-bold text-center ">
               About Me
             </h1>
             <p class="py-6  text-center">

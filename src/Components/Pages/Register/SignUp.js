@@ -12,10 +12,10 @@ import useToken from "../../../Hooks/useToken";
 import Spinner from "../../Spinner/Spinner";
 
 const SignUp = () => {
-  const { register, handleSubmit } = useForm();
+  const { register,  formState: { errors }, handleSubmit } = useForm();
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth);
-  const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+  const [updateProfile] = useUpdateProfile(auth);
   const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
   const location = useLocation();
   const navigate = useNavigate();
@@ -97,18 +97,27 @@ const SignUp = () => {
                       required: true,
                     })}
                   />
+                   {errors.Name?.type === 'required' && <span className="text-error">Name is required</span>}
+                   
                   <input
                     className="input input-bordered"
                     placeholder="Enter Your Email"
                     type="email"
-                    {...register("Email", { pattern: /\S+@\S+\.\S+/ })}
+                    {...register("Email", { required: true, pattern: /\S+@\S+\.\S+/ })}
                   />
+                  {errors.Name?.type === 'required' && <span className="text-error">Email is required</span>}
                   <input
                     placeholder="Password"
                     className="input input-bordered"
                     type="password"
-                    {...register("Password")}
+                    {...register("Password", {
+                      required: <span className=" text-error">Password Input is Blank</span>,
+                      minLength: {
+                        value: 6,
+                        message: "Minimum Length Upto 6"}
+                      })}
                   />
+                  {errors.Password && <span role="alert">{errors.Password.message}</span>}
                   <input
                     className="btn btn-ghost bg-primary text-white"
                     type="submit"
