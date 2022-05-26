@@ -88,6 +88,10 @@ const Navbar = () => {
             <li>
               <NavLink to="/blog">Blog</NavLink>
             </li>
+
+            <li>
+              <NavLink to="/my-portfolio">Portfolio</NavLink>
+            </li>
           </ul>
         </div>
         <div className="navbar-end">

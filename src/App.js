@@ -16,6 +16,7 @@ import PageNotFound from "./Components/PageNotFound/PageNotFound";
 import Blogs from "./Components/Pages/Blog/Blogs";
 import Footer from "./Components/Pages/Home/Footer";
 import Home from "./Components/Pages/Home/Home";
+import MyPortfolio from "./Components/Pages/MyPortfolio/MyPortfolio";
 import Purchase from "./Components/Pages/Purchase/Purchase";
 import Login from "./Components/Pages/Register/Login";
 import SignUp from "./Components/Pages/Register/SignUp";
@@ -29,6 +30,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/blog" element={<Blogs/>} />
+        <Route path="/my-portfolio" element={<MyPortfolio/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/signup" element={<SignUp/>}/>
         <Route path="/dashboard" element={<Dashboard></Dashboard>}>
