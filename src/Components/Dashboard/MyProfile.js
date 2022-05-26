@@ -36,15 +36,15 @@ const MyProfile = () => {
           </Link>
         </div>
       </div>
-      <div class="card w-full bg-base-100">
-        <figure class="px-10 pt-10">
+      <div className="card w-full bg-base-100">
+        <figure className="px-10 pt-10">
           <img
             src={Image ? Image : AvatarImag}
             alt="UploadImage"
-            class="rounded-xl w-[150px]"
+            className="rounded-xl w-[150px]"
           />
         </figure>
-        <div class="card-body ">
+        <div className="card-body ">
           <h2 className="text-xl font-semibold mb-4">Profile Information :</h2>
 
           <h2 className=" text-[18px] text-primary font-semibold ">

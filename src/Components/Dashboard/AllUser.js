@@ -18,8 +18,8 @@ const AllUser = () => {
   return (
     <div>
       <h2 className=" my-5 ml-5 lg:ml-0 text-xl font-semibold text-error">Total User: {users.length}</h2>
-      <div class="overflow-x-auto">
-        <table class="table w-full">
+      <div className="overflow-x-auto">
+        <table className="table w-full">
           <thead>
             <tr>
               <th>Index</th>

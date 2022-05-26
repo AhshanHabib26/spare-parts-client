@@ -29,8 +29,8 @@ const ManageProducts = () => {
       <h1 className='className=" ml-5 lg:ml-0 my-5 text-xl font-semibold text-error'>
         Manage All Products
       </h1>
-      <div class="overflow-x-auto">
-        <table class="table table-zebra w-full">
+      <div className="overflow-x-auto">
+        <table className="table table-zebra w-full">
           <thead>
             <tr>
               <th>Count</th>
@@ -48,7 +48,7 @@ const ManageProducts = () => {
                   <button onClick={() => handleDelete(product._id)} class="btn btn-error btn-sm">Delete</button>
                 </td>
                 <td>
-                  <button class="btn btn-primary btn-sm">Edit</button>
+                  <button className="btn btn-primary btn-sm">Edit</button>
                 </td>
               </tr>
             ))}

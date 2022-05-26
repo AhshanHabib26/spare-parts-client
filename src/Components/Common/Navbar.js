@@ -86,17 +86,17 @@ const Navbar = () => {
         </div>
         <div className="navbar-end">
           {user ? (
-            <button class="btn bg-error text-white btn-ghost" onClick={logout}>
+            <button className="btn bg-error text-white btn-ghost" onClick={logout}>
               Log out
             </button>
           ) : (
-            <div class="dropdown dropdown-end">
-              <label tabindex="0" class="btn bg-error text-white btn-ghost">
+            <div className="dropdown dropdown-end">
+              <label tabIndex="0" className="btn bg-error text-white btn-ghost">
                 Register
               </label>
               <ul
-                tabindex="0"
-                class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
+                tabIndex="0"
+                className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
               >
                 <li>
                   <NavLink to="/login">LogIn</NavLink>
@@ -108,7 +108,7 @@ const Navbar = () => {
             </div>
           )}
           <label
-            for="my-dashboard-btn"
+            htmlFor="my-dashboard-btn"
             tabIndex="1"
             className="btn btn-ghost lg:hidden"
           >

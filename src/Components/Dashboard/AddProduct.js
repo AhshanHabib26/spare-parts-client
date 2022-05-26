@@ -52,8 +52,8 @@ const AddProduct = () => {
     <div>
      
       <div>
-        <div class="card  w-11/12  lg:w-10/12 mx-auto bg-base-100 shadow-xl">
-          <div class="card-body ">
+        <div className="card  w-11/12  lg:w-10/12 mx-auto bg-base-100 shadow-xl">
+          <div className="card-body ">
           <h1 className=" my-5 text-2xl  font-semibold text-error">Add Product</h1>
             <form
               className="grid grid-cols-1 gap-4"
@@ -62,33 +62,33 @@ const AddProduct = () => {
               <input
                 placeholder="Product Name"
                 type="text"
-                class="input input-bordered w-full max-w-screen-sm"
+                className="input input-bordered w-full max-w-screen-sm"
                 {...register("Name")}
               />
               <input
                 placeholder="Product Description"
-                class="input input-bordered w-full max-w-screen-sm"
+                className="input input-bordered w-full max-w-screen-sm"
                 {...register("Description")}
               />
               <input
                 placeholder="Per Unit Price"
-                class="input input-bordered w-full max-w-screen-sm"
+                className="input input-bordered w-full max-w-screen-sm"
                 {...register("Price")}
               />
               <input
                 placeholder="Minimum Order"
-                class="input input-bordered w-full max-w-screen-sm"
+                className="input input-bordered w-full max-w-screen-sm"
                 {...register("MinOrder")}
               />
               <input
                 placeholder="Available Quantity"
-                class="input input-bordered w-full max-w-screen-sm"
+                className="input input-bordered w-full max-w-screen-sm"
                 {...register("AvailableQunatity")}
               />
 
               <input
                 type="file"
-                class="input input-bordered w-full max-w-screen-sm py-6 h-20"
+                className="input input-bordered w-full max-w-screen-sm py-6 h-20"
                 {...register("Image", {
                   validate: {
                     lessThan10MB: (files) =>

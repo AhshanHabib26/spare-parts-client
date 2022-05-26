@@ -65,11 +65,11 @@ const SignUp = () => {
 
   return (
     <div>
-      <div class="hero min-h-screen  bg-accent">
-        <div class="hero-content flex-col lg:flex-row-reverse">
-          <div class="text-center ">
-            <h1 class="text-5xl  font-bold text-primary">Hello, Friends!</h1>
-            <p class="py-6 w-[380px]">
+      <div className="hero min-h-screen  bg-accent">
+        <div className="hero-content flex-col lg:flex-row-reverse">
+          <div className="text-center ">
+            <h1 className="text-5xl  font-bold text-primary">Hello, Friends!</h1>
+            <p className="py-6 w-[380px]">
               Enter Your Personal Information And <br /> Start Journey With Us.
             </p>
             <p>
@@ -79,8 +79,8 @@ const SignUp = () => {
               </Link>{" "}
             </p>
           </div>
-          <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-            <div class="card-body">
+          <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+            <div className="card-body">
               <h1 className=" text-3xl mb-4 mt-[-10px]  font-semibold text-error">
                 Signup
               </h1>
@@ -125,16 +125,16 @@ const SignUp = () => {
                   />
                 </form>
 
-                <div class="divider">OR</div>
+                <div className="divider">OR</div>
 
                 <div className=" grid grid-cols-2 gap-x-6">
                   <button
                     onClick={() => signInWithGoogle()}
-                    class="btn btn-error"
+                    className="btn btn-error"
                   >
                     Google
                   </button>
-                  <button class="btn btn-primary">Github</button>
+                  <button className="btn btn-primary">Github</button>
                 </div>
               </div>
             </div>

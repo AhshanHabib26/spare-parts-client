@@ -23,7 +23,7 @@ const Tool = ({ product }) => {
 
   return (
     <div>
-      <div class="card lg:card-side bg-base-100 shadow-xl">
+      <div className="card lg:card-side bg-base-100 shadow-xl">
         <figure>
           <img
             className=" shrink-0 w-full h-auto hover:scale-75 transition-all ease-in-out cursor-pointer"
@@ -31,7 +31,7 @@ const Tool = ({ product }) => {
             alt=""
           />
         </figure>
-        <div class="card-body gap-0">
+        <div className="card-body gap-0">
           <h2 className=" text-xl font-semibold text-primary mb-2">
             {Name.slice(0, 50)}
           </h2>
@@ -54,7 +54,7 @@ const Tool = ({ product }) => {
               {AvailableQunatity}
             </small>{" "}
           </p>
-          <div class="card-actions justify-end">
+          <div className="card-actions justify-end">
             <Link className="btn btn-primary" onClick={handlePurChaseeBtn} to={`/purchase/${_id}`}>
               Buy Now
             </Link>

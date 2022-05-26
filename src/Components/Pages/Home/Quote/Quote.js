@@ -36,7 +36,7 @@ const Quote = () => {
   };
 
   return (
-    <div className="max-w-2xl px-8 lg:px-0 mx-auto">
+    <div className="max-w-2xl px-8 lg:px-0Name mx-auto">
       <h1 className=" text-center mb-7 text-2xl text-error font-semibold">
         Want To Get Quote?
       </h1>
@@ -47,40 +47,40 @@ const Quote = () => {
             name="Email"
             required
             placeholder="Enter Your Email"
-            class="input input-bordered"
+            className="input input-bordered"
           />
         </div>
-        <div class="form-control">
+        <div className="form-control">
           <input
             type="text"
             name="productName"
             required
             placeholder="Product Name"
-            class="input input-bordered my-3"
+            className="input input-bordered my-3"
           />
         </div>
-        <div class="form-control">
+        <div className="form-control">
           <input
             type="text"
             name="Description"
             required
             placeholder="Product Description"
-            class="input input-bordered  my-3"
+            className="input input-bordered  my-3"
           />
         </div>
         <div className=" grid grid-cols-1 lg:grid-cols-2 gap-4">
-          <div class="form-control">
+          <div className="form-control">
             <input
               type="text"
               required
               placeholder="Purchase Quantity"
               name="Qunatity"
-              class="input input-bordered text-warning"
+              className="input input-bordered text-warning"
             />
           </div>
 
-          <div class="form-control">
-            <button class="btn btn-primary">Order Confirm</button>
+          <div className="form-control">
+            <button className="btn btn-primary">Order Confirm</button>
           </div>
         </div>
       </form>

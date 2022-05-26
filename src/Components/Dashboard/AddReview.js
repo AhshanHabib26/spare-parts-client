@@ -28,7 +28,6 @@ const AddReview = () => {
             Rating: data.Rating,
             Date: today,
           };
-          console.log(dataInfo);
 
           const url = "https://motor-parts-263.herokuapp.com/review";
           fetch(url, {
@@ -56,8 +55,8 @@ const AddReview = () => {
         Your Valueable Comment, We Can Improve!
       </h2>
       <>
-        <div class="card   max-w-screen-sm mx-auto shadow-xl">
-          <div class="card-body ">
+        <div className="card   max-w-screen-sm mx-auto shadow-xl">
+          <div className="card-body ">
             <h2 className=" text-xl font-semibold text-error mb-2">
               Your Awesome Review!
             </h2>
@@ -67,23 +66,23 @@ const AddReview = () => {
             >
               <input
                 placeholder="Your Name"
-                class="input input-bordered w-full max-w-screen-sm"
+                className="input input-bordered w-full max-w-screen-sm"
                 {...register("Name", { required: true })}
               />
               <input
                 placeholder="Rating Us (1 to 5)"
                 type='number'
-                class="input input-bordered w-full max-w-screen-sm"
+                className="input input-bordered w-full max-w-screen-sm"
                 {...register("Rating", { min: 5 }, { required: true })}
               />
               <input
                 placeholder="Your Comment"
-                class="input input-bordered w-full max-w-screen-sm"
+                className="input input-bordered w-full max-w-screen-sm"
                 {...register("Comment")}
               />
               <input
                 type="file"
-                class="input input-bordered w-full max-w-screen-sm py-6 h-20"
+                className="input input-bordered w-full max-w-screen-sm py-6 h-20"
                 {...register("Image", {
                   required: {
                     value: true,

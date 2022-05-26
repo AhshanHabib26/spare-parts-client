@@ -10,13 +10,13 @@ const Project = () => {
         My Projects
       </h2>
       <div className=" grid grid-cols-1 lg:grid-cols-3 gap-8 mx-12 py-16">
-        <div class="card bg-slate-200 shadow-xl image-full">
+        <div className="card bg-slate-200 shadow-xl image-full">
           <figure>
             <img src={carHouse} alt="car" />
           </figure>
-          <div class="card-body items-center justify-center ">
+          <div className="card-body items-center justify-center ">
             <p className="flex-grow-0">Web Car Ware House</p>
-            <h2 class="card-title text-center">The Ultimate Bussiness Car Ware House Services</h2>
+            <h2 className="card-title text-center">The Ultimate Bussiness Car Ware House Services</h2>
             <div>
               <a
                 className=" btn btn-primary mr-2"
@@ -33,13 +33,13 @@ const Project = () => {
             </div>
           </div>
         </div>
-        <div class="card w-96 bg-slate-200 shadow-xl image-full">
+        <div className="card w-96 bg-slate-200 shadow-xl image-full">
           <figure>
             <img src={HealthCare} alt="Health" />
           </figure>
-          <div class="card-body items-center justify-center">
+          <div className="card-body items-center justify-center">
             <p className=" flex-grow-0">Web Health Solution</p>
-            <h2 class="card-title text-center">Your Health Solution Assistant Provider</h2>
+            <h2 className="card-title text-center">Your Health Solution Assistant Provider</h2>
             <div>
               <a
                 className=" btn btn-primary mr-2"
@@ -56,13 +56,13 @@ const Project = () => {
             </div>
           </div>
         </div>
-        <div class="card w-96 bg-slate-200 shadow-xl image-full">
+        <div className="card w-96 bg-slate-200 shadow-xl image-full">
           <figure>
             <img src={TutoHome} alt="Tutor" />
           </figure>
-          <div class="card-body items-center justify-center">
+          <div className="card-body items-center justify-center">
             <p className=" flex-grow-0">Web Education Service</p>
-            <h2 class="card-title text-center">Web Based Education Service Application</h2>
+            <h2 className="card-title text-center">Web Based Education Service Application</h2>
             <div>
               <a
                 className=" btn btn-primary mr-2"

@@ -46,15 +46,15 @@ const User = ({ user, index }) => {
       <td>{user.Email}</td>
       <td>
         {role !== "admin" ? (
-          <button onClick={handleUserAdmin} class="btn btn-primary btn-sm">
+          <button onClick={handleUserAdmin} className="btn btn-primary btn-sm">
             Make Admin
           </button>
         ) : (
-          <button class="btn btn-primary btn-sm">Already Admin</button>
+          <button className="btn btn-primary btn-sm">Already Admin</button>
         )}
       </td>
       <td>
-        <button onClick={() => handaleDelete(_id)} class="btn btn-error btn-sm">Delete</button>
+        <button onClick={() => handaleDelete(_id)} className="btn btn-error btn-sm">Delete</button>
       </td>
     </tr>
   );

@@ -76,10 +76,10 @@ const Purchase = () => {
 
   return (
     <div>
-      <div class="hero min-h-screen bg-accent">
-        <div class="hero-content mx-auto flex-col lg:flex-row-reverse">
-          <div class="text-center lg:text-left">
-            <div class="card max-w-xl flex-shrink-0 bg-base-100 shadow-xl">
+      <div className="hero min-h-screen bg-accent">
+        <div className="hero-content mx-auto flex-col lg:flex-row-reverse">
+          <div className="text-center lg:text-left">
+            <div className="card max-w-xl flex-shrink-0 bg-base-100 shadow-xl">
               <figure>
                 <img
                   className="h-auto w-[250px] hover:scale-75 transition-all ease-in-out cursor-pointer"
@@ -87,7 +87,7 @@ const Purchase = () => {
                   alt=""
                 />
               </figure>
-              <div class="card-body gap-0">
+              <div className="card-body gap-0">
                 <h2 className=" text-xl font-semibold text-primary mb-2">
                   {item.Name}
                 </h2>
@@ -113,8 +113,8 @@ const Purchase = () => {
               </div>
             </div>
           </div>
-          <div class="card shrink-0 w-6/12 shadow-2xl bg-base-100">
-            <div class="card-body">
+          <div className="card shrink-0 w-6/12 shadow-2xl bg-base-100">
+            <div className="card-body">
               <h1 className="  mb-4 text-xl font-semibold text-primary">
                 Product Details:
               </h1>
@@ -126,68 +126,68 @@ const Purchase = () => {
                     value={user.email}
                     readOnly
                     disabled
-                    class="input input-bordered"
+                    className="input input-bordered"
                   />
                 </div>
-                <div class="form-control">
+                <div className="form-control">
                   <input
                     type="text"
                     name="Name"
                     value={item.Name}
                     readOnly
-                    class="input input-bordered my-5"
+                    className="input input-bordered my-5"
                   />
                 </div>
                 <div className="flex items-center justify-between">
-                  <div class="form-control">
+                  <div className="form-control">
                     <input
                       type="text"
                       name="Price"
                       readOnly
                       value={`$ ${item.Price} Unit Price`}
-                      class="input input-bordered text-error text-md font-semibold"
+                      className="input input-bordered text-error text-md font-semibold"
                     />
                   </div>
-                  <div class="form-control">
+                  <div className="form-control">
                     <input
                       type="text"
                       readOnly
                       name="AvailableQunatity"
                       value={`$ ${item.AvailableQunatity} Available Quantity`}
-                      class="input input-bordered text-warning font-semibold my-4"
+                      className="input input-bordered text-warning font-semibold my-4"
                     />
                   </div>
                 </div>
-                <div class="form-control">
+                <div className="form-control">
                   <input
                     type="text"
                     name="Phone"
                     required
                     placeholder="Enter Your Mobile Number"
-                    class="input input-bordered"
+                    className="input input-bordered"
                   />
                 </div>
-                <div class="form-control">
+                <div className="form-control">
                   <input
                     type="text"
                     name="Address"
                     required
                     placeholder="Enter Your Address"
-                    class="input input-bordered my-4"
+                    className="input input-bordered my-4"
                   />
                 </div>
-                <div class="form-control">
+                <div className="form-control">
                   <input
                     type="number"
                     name="OrderCount"
                     placeholder="Order Quantity"
-                    class="input input-bordered"
+                    className="input input-bordered"
                   />
                 </div>
-                <div class="form-control mt-6">
+                <div className="form-control mt-6">
                   <button
                     ref={buttonRef}
-                    class="btn btn-primary"
+                    className="btn btn-primary"
                   >
                     Order Confirm
                   </button>

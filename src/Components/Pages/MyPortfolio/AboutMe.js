@@ -18,9 +18,9 @@ const AboutMe = () => {
               Tailwind, Javascript, React JS And Wordpress Themes Customization.
             </p>
             <div className=" grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div class="card  bg-slate-200">
-                <div class="card-body">
-                  <h2 class="card-title">Personal Details</h2>
+              <div className="card  bg-slate-200">
+                <div className="card-body">
+                  <h2 className="card-title">Personal Details</h2>
                   <p className=" text-lg  text-slate-800 font-semibold text-opacity-60">
                     Name: Ahshan Habib
                   </p>
@@ -36,15 +36,15 @@ const AboutMe = () => {
                   </button>
                 </div>
               </div>
-              <div class="card mt-[-50px] lg:mt-0 bg-slate-200">
-                <div class="card-body">
-                  <h2 class="card-title">Skills & Experience</h2>
+              <div className="card mt-[-50px] lg:mt-0 bg-slate-200">
+                <div className="card-body">
+                  <h2 className="card-title">Skills & Experience</h2>
                   <div>
 
                     <div>
                       <span className=' text-lg font-semibold text-error'>HTML5</span>
                       <progress
-                      class="progress progress-primary ml-2 w-56"
+                      className="progress progress-primary ml-2 w-56"
                       value="100"
                       max="100"
                     ></progress>
@@ -52,7 +52,7 @@ const AboutMe = () => {
                     <div>
                       <span className=' text-lg font-semibold text-error'>CSS3</span>
                       <progress
-                      class="progress progress-primary ml-2 w-56"
+                      className="progress progress-primary ml-2 w-56"
                       value="100"
                       max="100"
                     ></progress>
@@ -60,7 +60,7 @@ const AboutMe = () => {
                     <div>
                       <span className=' text-lg font-semibold text-error'>Bootstrap 5</span>
                       <progress
-                      class="progress progress-primary ml-2 w-56"
+                      className="progress progress-primary ml-2 w-56"
                       value="100"
                       max="100"
                     ></progress>
@@ -68,7 +68,7 @@ const AboutMe = () => {
                     <div>
                       <span className=' text-lg font-semibold text-error'>Tailwind</span>
                       <progress
-                      class="progress progress-primary ml-2 w-56"
+                      className="progress progress-primary ml-2 w-56"
                       value="70"
                       max="100"
                     ></progress>
@@ -76,7 +76,7 @@ const AboutMe = () => {
                     <div>
                       <span className=' text-lg font-semibold  text-error'>JavaScript</span>
                       <progress
-                      class="progress progress-primary ml-2 w-56"
+                      className="progress progress-primary ml-2 w-56"
                       value="80"
                       max="100"
                     ></progress>
@@ -84,7 +84,7 @@ const AboutMe = () => {
                     <div>
                       <span className=' text-lg font-semibold text-error'>React JS</span>
                       <progress
-                      class="progress progress-primary ml-2 w-56"
+                      className="progress progress-primary ml-2 w-56"
                       value="80"
                       max="100"
                     ></progress>
@@ -92,7 +92,7 @@ const AboutMe = () => {
                     <div>
                       <span className=' text-lg font-semibold  text-error'>Node JS</span>
                       <progress
-                      class="progress progress-primary ml-2 w-56"
+                      className="progress progress-primary ml-2 w-56"
                       value="60"
                       max="100"
                     ></progress>
@@ -101,7 +101,7 @@ const AboutMe = () => {
                     <div>
                       <span className=' text-lg font-semibold  text-error'>Express JS</span>
                       <progress
-                      class="progress progress-primary ml-2 w-56"
+                      className="progress progress-primary ml-2 w-56"
                       value="80"
                       max="100"
                     ></progress>
@@ -109,7 +109,7 @@ const AboutMe = () => {
                     <div>
                       <span className=' text-lg font-semibold text-error'>Mongo DB</span>
                       <progress
-                      class="progress progress-primary ml-2 w-56"
+                      className="progress progress-primary ml-2 w-56"
                       value="70"
                       max="100"
                     ></progress>

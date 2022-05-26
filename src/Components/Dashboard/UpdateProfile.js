@@ -61,8 +61,8 @@ const UpdateProfile = () => {
         Update Your Profile!
       </h2>
       <>
-        <div class="card   max-w-screen-sm mx-auto">
-          <div class="card-body ">
+        <div className="card   max-w-screen-sm mx-auto">
+          <div className="card-body ">
             <form
               className="grid grid-cols-1 gap-4"
               onSubmit={handleSubmit(onSubmit)}
@@ -70,26 +70,26 @@ const UpdateProfile = () => {
               <input
                 value={user.displayName}
                 readOnly
-                class="input input-bordered w-full max-w-screen-sm"
+                className="input input-bordered w-full max-w-screen-sm"
                 {...register("Name")}
               />
               <input
                 value={user?.email}
                 readOnly
-                class="input input-bordered w-full max-w-screen-sm"
+                className="input input-bordered w-full max-w-screen-sm"
                 {...register("Email")}
               />
               <input
                 placeholder='Your Phone Number'
                 type='tel'
-                class="input input-bordered w-full max-w-screen-sm"
+                className="input input-bordered w-full max-w-screen-sm"
                 {...register("Phone")}
               />
 
               <h2>Your Profile Image: </h2>
               <input
                 type="file"
-                class="input input-bordered w-full max-w-screen-sm py-6 h-20"
+                className="input input-bordered w-full max-w-screen-sm py-6 h-20"
                 {...register("Image", {
                   validate: {
                     lessThan10MB: (files) =>
@@ -107,19 +107,19 @@ const UpdateProfile = () => {
             <input
                 placeholder='Education Label'
                 type='text'
-                class="input input-bordered w-full max-w-screen-sm"
+                className="input input-bordered w-full max-w-screen-sm"
                 {...register("EducationLabel")}
               />
               <input
                 placeholder='Your Subject'
                 type='text'
-                class="input input-bordered w-full max-w-screen-sm"
+                className="input input-bordered w-full max-w-screen-sm"
                 {...register("EducationDeg")}
               />
               <input
                 placeholder='Institution Name'
                 type='text'
-                class="input input-bordered w-full max-w-screen-sm"
+                className="input input-bordered w-full max-w-screen-sm"
                 {...register("InstitutionName")}
               />
 
@@ -128,19 +128,19 @@ const UpdateProfile = () => {
               <input
                 placeholder='Github Profile'
                 type='url'
-                class="input input-bordered w-full max-w-screen-sm"
+                className="input input-bordered w-full max-w-screen-sm"
                 {...register("Github")}
               />
               <input
                 placeholder='Portfolio Link'
                 type='url'
-                class="input input-bordered w-full max-w-screen-sm"
+                className="input input-bordered w-full max-w-screen-sm"
                 {...register("Portfolio")}
               />
               <input
                 placeholder='Linkedin Profile Link'
                 type='url'
-                class="input input-bordered w-full max-w-screen-sm"
+                className="input input-bordered w-full max-w-screen-sm"
                 {...register("Linkedin")}
               />
 

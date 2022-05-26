@@ -10,11 +10,11 @@ const Contact = () => {
     }
   return (
     <div className=" bg-slate-100 pb-16">
-      <h2 class="text-4xl lg:text-7xl italic uppercase text-opacity-20 text-primary font-bold text-center pt-5 ">
+      <h2 className="text-4xl lg:text-7xl italic uppercase text-opacity-20 text-primary font-bold text-center pt-5 ">
         Contact Us
         <div>
-        <div class="card w-11/12 lg:w-8/12 mx-auto bg-slate-100 ">
-          <div class="card-body ">
+        <div className="card w-11/12 lg:w-8/12 mx-auto bg-slate-100 ">
+          <div className="card-body ">
             <form
               className="grid grid-cols-1 gap-4"
               onSubmit={handleSubmit(onSubmit)}
@@ -23,23 +23,23 @@ const Contact = () => {
               <input
                 placeholder="Enter Your Name"
                 type="text"
-                class="input input-bordered w-full"
+                className="input input-bordered w-full"
                 {...register("Name")}
               />
               <input
                 placeholder="Enter Your Email"
-                class="input input-bordered w-full"
+                className="input input-bordered w-full"
                 {...register("Email")}
               />
               </div>
               <input
                 placeholder="Your Project Title"
-                class="input input-bordered w-full max-w-screen-lg"
+                className="input input-bordered w-full max-w-screen-lg"
                 {...register("Project")}
               />
               <textarea
                 placeholder="Your Comment"
-                class="input input-bordered w-full h-[150px] resize-none max-w-screen-lg"
+                className="input input-bordered w-full h-[150px] resize-none max-w-screen-lg"
                 {...register("MinOrder")}
               />
               <input
