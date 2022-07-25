@@ -26,7 +26,7 @@ const Tools = () => {
   const dicProducts = products.slice(0, 6);
 
   return (
-    <div className="md:container md:mx-auto">
+    <div id='tools' className="md:container md:mx-auto">
       <h2 className=" text-center md:text-left lg:text-left  text-primary text-2xl font-semibold my-4">
         {" "}
         Our Best Auto Spare Parts Accessories

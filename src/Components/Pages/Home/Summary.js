@@ -6,7 +6,7 @@ import ToolImage from "../../../images/Icons/tool-box.png";
 
 const Summary = () => {
   return ( 
-    <div className="my-6 mx-0 p-14 bg-neutral">
+    <div id='bussiness-summary' className="my-6 mx-0 p-14 bg-neutral">
       <div className=" w-9/12 mx-auto px-4 lg:px-0 grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-5">
         <div className="card p-2 w-full shadow-lg">
           <figure>

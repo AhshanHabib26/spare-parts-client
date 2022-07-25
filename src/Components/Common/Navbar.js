@@ -4,6 +4,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { NavLink, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 import LogoImg from "../../images/logo.png";
+import { HashLink } from "react-router-hash-link";
 
 const Navbar = () => {
   const [user] = useAuthState(auth);
@@ -41,30 +42,43 @@ const Navbar = () => {
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <NavLink to="/">Home</NavLink>
+                <HashLink to="/">Home</HashLink>
+              </li>
+              <li>
+                <HashLink smooth className="my-2" to="#tools">
+                  Products
+                </HashLink>
+              </li>
+
+              <li>
+                <HashLink smooth to="#bussiness-summary">
+                  Summary
+                </HashLink>
+              </li>
+
+              <li>
+                <HashLink smooth className="my-2" to="#customer-reviews">
+                  Reviews
+                </HashLink>
+              </li>
+
+              <li>
+                <HashLink smooth to="#contact-us">
+                  Contact Us
+                </HashLink>
               </li>
 
               {user && (
                 <>
                   <li>
+                    <NavLink className='my-2' to="/blog">Blog</NavLink>
+                  </li>
+
+                  <li>
                     <NavLink to="/dashboard">Dashboard</NavLink>
                   </li>
                 </>
               )}
-
-              <li>
-                <NavLink className="my-3" to="/blog">Blog</NavLink>
-              </li>
-
-              <li>
-                <a
-                  rel="noreferrer"
-                  target="_blank"
-                  href="https://habibdev.netlify.app/"
-                >
-                  Portfolio
-                </a>
-              </li>
             </ul>
           </div>
           <img to="/" className="btn btn-ghost" src={LogoImg} alt="" />
@@ -72,30 +86,44 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal p-0">
             <li>
-              <NavLink to="/">Home</NavLink>
+              <HashLink to="/">Home</HashLink>
+            </li>
+
+            <li>
+              <HashLink smooth className="mx-2" to="#tools">
+                Products
+              </HashLink>
+            </li>
+
+            <li>
+              <HashLink smooth to="#bussiness-summary">
+                Summary
+              </HashLink>
+            </li>
+
+            <li>
+              <HashLink smooth className="mx-2" to="#customer-reviews">
+                Reviews
+              </HashLink>
+            </li>
+
+            <li>
+              <HashLink smooth to="#contact-us">
+                Contact Us
+              </HashLink>
             </li>
 
             {user && (
               <>
                 <li>
+                  <NavLink className='mx-2' to="/blog">Blog</NavLink>
+                </li>
+
+                <li>
                   <NavLink to="/dashboard">Dashboard</NavLink>
                 </li>
               </>
             )}
-
-            <li>
-              <NavLink className="mx-3" to="/blog">Blog</NavLink>
-            </li>
-
-            <li>
-              <a
-                rel="noreferrer"
-                target="_blank"
-                href="https://habibdev.netlify.app/"
-              >
-                Portfolio
-              </a>
-            </li>
           </ul>
         </div>
         <div className="navbar-end">

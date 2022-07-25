@@ -36,7 +36,7 @@ const Quote = () => {
   };
 
   return (
-    <div className="max-w-2xl px-8 lg:px-0Name mx-auto">
+    <div id="contact-us" className="max-w-2xl px-8 lg:px-0Name mx-auto">
       <h1 className=" text-center mb-7 text-2xl text-error font-semibold">
         Want To Get Quote?
       </h1>
