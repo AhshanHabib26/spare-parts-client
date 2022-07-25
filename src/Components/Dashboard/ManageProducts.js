@@ -1,9 +1,28 @@
 import React from "react";
 import { toast } from "react-toastify";
-import useProduct from "../../Hooks/useProduct";
+import Spinner from "../Spinner/Spinner";
+import { useQuery } from "react-query";
 
 const ManageProducts = () => {
-  const [products] = useProduct();
+
+  const {
+    isLoading,
+    error,
+    data: products,
+  } = useQuery("repoData", () =>
+    fetch("https://motor-parts-263.herokuapp.com/product").then((res) =>
+      res.json()
+    )
+  );
+
+  if (isLoading) {
+    return <Spinner />;
+  }
+
+  if (error) {
+    return toast.error("Please Refreash Your Page");
+  }
+
 
   const handleDelete = (id) =>{
     const procced = window.confirm('Are You Sure Want To Delete')
