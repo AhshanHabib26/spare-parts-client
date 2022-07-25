@@ -1,16 +1,18 @@
 import { signOut } from "firebase/auth";
 import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 import LogoImg from "../../images/logo.png";
 
 const Navbar = () => {
   const [user] = useAuthState(auth);
+  const navigate = useNavigate();
 
   const logout = () => {
     signOut(auth);
     localStorage.removeItem("accessToken");
+    navigate("/");
   };
 
   return (
@@ -51,11 +53,17 @@ const Navbar = () => {
               )}
 
               <li>
-                <NavLink to="/blog">Blog</NavLink>
+                <NavLink className="my-3" to="/blog">Blog</NavLink>
               </li>
 
               <li>
-                <NavLink to="/my-portfolio">Portfolio</NavLink>
+                <a
+                  rel="noreferrer"
+                  target="_blank"
+                  href="https://habibdev.netlify.app/"
+                >
+                  Portfolio
+                </a>
               </li>
             </ul>
           </div>
@@ -76,17 +84,26 @@ const Navbar = () => {
             )}
 
             <li>
-              <NavLink to="/blog">Blog</NavLink>
+              <NavLink className="mx-3" to="/blog">Blog</NavLink>
             </li>
 
             <li>
-              <NavLink to="/my-portfolio">Portfolio</NavLink>
+              <a
+                rel="noreferrer"
+                target="_blank"
+                href="https://habibdev.netlify.app/"
+              >
+                Portfolio
+              </a>
             </li>
           </ul>
         </div>
         <div className="navbar-end">
           {user ? (
-            <button className="btn bg-error text-white btn-ghost" onClick={logout}>
+            <button
+              className="btn bg-error text-white btn-ghost"
+              onClick={logout}
+            >
               Log out
             </button>
           ) : (
