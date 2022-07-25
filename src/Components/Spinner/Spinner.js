@@ -3,7 +3,7 @@ import SpinnerImg from '../../images/spinner.gif'
 
 const Spinner = () => {
     return (
-        <div className='text-center'>
+        <div className='max-w-xl mx-auto'>
             <img className='w-50' src={SpinnerImg} alt="" />
         </div>
     );
