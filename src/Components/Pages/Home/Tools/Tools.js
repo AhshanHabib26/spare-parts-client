@@ -9,7 +9,7 @@ const Tools = () => {
     isLoading,
     error,
     data: products,
-  } = useQuery("repoData", () =>
+  } = useQuery("SparePartsData", () =>
     fetch("https://motor-parts-263.herokuapp.com/product").then((res) =>
       res.json()
     )
