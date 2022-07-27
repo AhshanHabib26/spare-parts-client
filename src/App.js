@@ -55,7 +55,7 @@ function App() {
         <Route path="*" element={<PageNotFound/>}/>
       </Routes>
       <Footer/>
-      <ScrollToTop smooth color="#fff"  style={{ backgroundColor: "#176e6a", paddingLeft: 5 }} />
+      <ScrollToTop smooth color="#fff" height="18"  style={{ backgroundColor: "#176e6a", paddingLeft: 5 }} />
       <ToastContainer />
     </div>
   );
