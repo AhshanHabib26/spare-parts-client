@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
+import ScrollToTop from "react-scroll-to-top";
 import "./App.css";
 import Navbar from "./Components/Common/Navbar";
 import AddProduct from "./Components/Dashboard/AddProduct";
@@ -54,6 +55,7 @@ function App() {
         <Route path="*" element={<PageNotFound/>}/>
       </Routes>
       <Footer/>
+      <ScrollToTop smooth color="#fff"  style={{ backgroundColor: "#176e6a", paddingLeft: 5 }} />
       <ToastContainer />
     </div>
   );
