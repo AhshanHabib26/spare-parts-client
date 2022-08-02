@@ -15,14 +15,16 @@ const Tool = ({ product }) => {
     if (success === true) {
       navigate(from, { replace: true });
     } else {
-      
-     toast("Please Try Again");
-     
+      toast("Please Try Again");
     }
   };
 
   return (
-    <div>
+    <div
+    data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom"
+     data-aos-duration="2000"
+    >
       <div className="card lg:card-side bg-base-100 shadow-xl">
         <figure>
           <img
@@ -55,7 +57,11 @@ const Tool = ({ product }) => {
             </small>{" "}
           </p>
           <div className="card-actions justify-end">
-            <Link className="btn btn-primary" onClick={handlePurChaseeBtn} to={`/purchase/${_id}`}>
+            <Link
+              className="btn btn-primary"
+              onClick={handlePurChaseeBtn}
+              to={`/purchase/${_id}`}
+            >
               Buy Now
             </Link>
           </div>
