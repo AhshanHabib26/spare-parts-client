@@ -1,0 +1,7 @@
+.BannaerImage{
+    background-image: url(../../images/Banner/SP_Banner.png);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center;
+    background-attachment: fixed;
+}
