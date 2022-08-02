@@ -63,17 +63,19 @@ const Navbar = () => {
               </li>
 
               <li>
-                <HashLink smooth to="#contact-us">
+                <HashLink smooth to="#blog">
+                  Blog
+                </HashLink>
+              </li>
+
+              <li>
+                <HashLink className="my-2" smooth to="#contact-us">
                   Contact Us
                 </HashLink>
               </li>
 
               {user && (
                 <>
-                  <li>
-                    <NavLink className='my-2' to="/blog">Blog</NavLink>
-                  </li>
-
                   <li>
                     <NavLink to="/dashboard">Dashboard</NavLink>
                   </li>
@@ -108,6 +110,12 @@ const Navbar = () => {
             </li>
 
             <li>
+              <HashLink smooth className="mx-2" to="#blog">
+                Blog
+              </HashLink>
+            </li>
+
+            <li>
               <HashLink smooth to="#contact-us">
                 Contact Us
               </HashLink>
@@ -115,10 +123,6 @@ const Navbar = () => {
 
             {user && (
               <>
-                <li>
-                  <NavLink className='mx-2' to="/blog">Blog</NavLink>
-                </li>
-
                 <li>
                   <NavLink to="/dashboard">Dashboard</NavLink>
                 </li>

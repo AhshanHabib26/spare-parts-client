@@ -1,4 +1,5 @@
 import React from 'react';
+import Blog from './Blog/Blog';
 import Carousel from './Carousel';
 import Offer from './Offer';
 import Quote from './Quote/Quote';
@@ -16,6 +17,7 @@ const Home = () => {
            <Summary/>
            <Reviews/>
            <Subscribe/>
+           <Blog/>
            <Quote/>
         </div>
     );
