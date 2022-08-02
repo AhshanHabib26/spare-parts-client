@@ -1,0 +1,11 @@
+.OfferBanner{
+  
+        background-image: url(../../images/Banner/SP_Banner_1.png);
+        background-repeat: no-repeat;
+        background-size: cover; 
+        background-position: center;
+        background-attachment: fixed;
+        margin-top: 50px;
+        margin-bottom: 20px;
+   
+}

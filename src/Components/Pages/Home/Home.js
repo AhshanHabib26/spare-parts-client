@@ -1,5 +1,6 @@
 import React from 'react';
 import Carousel from './Carousel';
+import Offer from './Offer';
 import Quote from './Quote/Quote';
 import Reviews from './Reviews/Reviews';
 import Subscribe from './Subscribe';
@@ -11,6 +12,7 @@ const Home = () => {
         <div>
            <Carousel/>
            <Tools/>
+           <Offer/>
            <Summary/>
            <Reviews/>
            <Subscribe/>
