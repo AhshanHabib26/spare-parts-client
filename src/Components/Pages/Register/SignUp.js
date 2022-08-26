@@ -46,7 +46,7 @@ const SignUp = () => {
       Email: data.Email,
     };
 
-    fetch("http://localhost:5000/userInfo", {
+    fetch("https://spare-parts-server.vercel.app/userInfo", {
       method: "POST",
       headers: {
         "content-type": "application/json",

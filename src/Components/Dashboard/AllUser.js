@@ -5,7 +5,7 @@ const AllUser = () => {
   const [users, setUsers] = useState([]);
 
  useEffect(() =>{
-    fetch("https://motor-parts-263.herokuapp.com/user", {
+    fetch("https://spare-parts-server.vercel.app/user", {
         method: "GET",
         headers:{
             authorization: `Bearer ${localStorage.getItem('accessToken')}`

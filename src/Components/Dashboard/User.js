@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 const User = ({ user, index }) => {
   const { Email, role , _id} = user;
   const handleUserAdmin = () => {
-    fetch(`https://motor-parts-263.herokuapp.com/user/admin/${Email}`, {
+    fetch(`https://spare-parts-server.vercel.app/user/admin/${Email}`, {
       method: "PUT",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,
@@ -27,7 +27,7 @@ const User = ({ user, index }) => {
   const handaleDelete =(id) =>{
     const procceed = window.confirm("Are You Sure You Want To Delete?");
     if (procceed) {
-      const url = `https://motor-parts-263.herokuapp.com/user/${id}`;
+      const url = `https://spare-parts-server.vercel.app/user/${id}`;
       fetch(url, {
         method: "DELETE",
       })

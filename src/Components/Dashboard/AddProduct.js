@@ -28,7 +28,7 @@ const AddProduct = () => {
           };
           console.log(dataInfo);
 
-          const url = `https://motor-parts-263.herokuapp.com/product`;
+          const url = `https://spare-parts-server.vercel.app/product`;
           fetch(url, {
             method: "POST",
             headers: {

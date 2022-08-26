@@ -29,7 +29,7 @@ const AddReview = () => {
             Date: today,
           };
 
-          const url = "https://motor-parts-263.herokuapp.com/review";
+          const url = "https://spare-parts-server.vercel.app/review";
           fetch(url, {
             method: "POST",
             headers: {

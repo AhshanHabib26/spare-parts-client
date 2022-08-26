@@ -9,7 +9,7 @@ const MyOrder = ({ order }) => {
     const confirm = window.confirm('Are You Sure Want To Delete')
     if (confirm) {
       console.log(id);
-      const url = `https://motor-parts-263.herokuapp.com/userproducts/${id}`;
+      const url = `https://spare-parts-server.vercel.app/userproducts/${id}`;
       fetch(url, {
         method: "DELETE",
       })

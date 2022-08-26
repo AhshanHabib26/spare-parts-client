@@ -4,7 +4,7 @@ const useBlog = () => {
     const [blogs , setBlogs] = useState([])
 
     useEffect( () =>{
-        fetch('https://motor-parts-263.herokuapp.com/blogPost')
+        fetch('https://spare-parts-server.vercel.app/blogPost')
         .then( res => res.json())
         .then(data => setBlogs(data))
     },[])

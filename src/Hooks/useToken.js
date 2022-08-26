@@ -9,7 +9,7 @@ const useToken = (user) => {
 
     if (email) {
 
-      fetch(`https://motor-parts-263.herokuapp.com/user/${email}`, {
+      fetch(`https://spare-parts-server.vercel.app/user/${email}`, {
         method: "PUT",
         headers: {
           "content-type": "application/json",

@@ -12,7 +12,7 @@ const Purchase = () => {
   const buttonRef = useRef();
 
   useEffect(() => {
-    const url = `https://motor-parts-263.herokuapp.com/product/${id}`;
+    const url = `https://spare-parts-server.vercel.app/product/${id}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setItem(data));
@@ -53,7 +53,7 @@ const Purchase = () => {
         TotalAmount: totalCost,
       };
 
-      fetch("https://motor-parts-263.herokuapp.com/userproducts", {
+      fetch("https://spare-parts-server.vercel.app/userproducts", {
         method: "POST",
         headers: {
           "content-type": "application/json"

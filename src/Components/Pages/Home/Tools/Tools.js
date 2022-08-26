@@ -10,7 +10,7 @@ const Tools = () => {
     error,
     data: products,
   } = useQuery("SparePartsData", () =>
-    fetch("https://motor-parts-263.herokuapp.com/product").then((res) =>
+    fetch("https://spare-parts-server.vercel.app/product").then((res) =>
       res.json()
     )
   );

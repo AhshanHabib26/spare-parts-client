@@ -12,7 +12,7 @@ const MyOrders = () => {
 
   useEffect(() => {
     const email = user?.email;
-    const url = `https://motor-parts-263.herokuapp.com/userproducts?email=${email}`;
+    const url = `https://spare-parts-server.vercel.app/userproducts?email=${email}`;
     if (user) {
       fetch(url, {
         method: "GET",

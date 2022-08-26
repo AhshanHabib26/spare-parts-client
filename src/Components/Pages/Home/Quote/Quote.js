@@ -16,7 +16,7 @@ const Quote = () => {
       Qunatity: Qunatity,
     };
 
-    fetch("https://motor-parts-263.herokuapp.com/quote", {
+    fetch("https://spare-parts-server.vercel.app/quote", {
       method: "POST",
       headers: {
         "content-type": "application/json",

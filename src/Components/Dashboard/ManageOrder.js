@@ -5,7 +5,7 @@ const ManageOrder = () => {
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
-    fetch("https://motor-parts-263.herokuapp.com/userproducts")
+    fetch("https://spare-parts-server.vercel.app/userproducts")
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, []);
