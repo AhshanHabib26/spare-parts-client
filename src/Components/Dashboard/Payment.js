@@ -10,7 +10,7 @@ const stripePromise = loadStripe(
 
 const Payment = () => {
   const { id } = useParams();
-  const url = `https://spare-parts-server.vercel.app/userproducts/${id}`;
+  const url = `https://spare-parts.onrender.com/userproducts/${id}`;
 
   const { data, isLoading } = useQuery(["product", id], () =>
     fetch(url).then((res) => res.json())

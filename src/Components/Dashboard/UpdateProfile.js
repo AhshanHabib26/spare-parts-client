@@ -36,7 +36,7 @@ const UpdateProfile = () => {
           };
           console.log(dataInfo);
 
-          const url = `https://spare-parts-server.vercel.app/userInfo/${userEmail}`;
+          const url = `https://spare-parts.onrender.com/userInfo/${userEmail}`;
           fetch(url, {
             method: "PUT",
             headers: {

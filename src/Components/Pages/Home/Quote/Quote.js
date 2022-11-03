@@ -16,7 +16,7 @@ const Quote = () => {
       Qunatity: Qunatity,
     };
 
-    fetch("https://spare-parts-server.vercel.app/quote", {
+    fetch("https://spare-parts.onrender.com/quote", {
       method: "POST",
       headers: {
         "content-type": "application/json",

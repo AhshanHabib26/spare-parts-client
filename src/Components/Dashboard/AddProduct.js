@@ -28,7 +28,7 @@ const AddProduct = () => {
           };
           console.log(dataInfo);
 
-          const url = `https://spare-parts-server.vercel.app/product`;
+          const url = `https://spare-parts.onrender.com/product`;
           fetch(url, {
             method: "POST",
             headers: {

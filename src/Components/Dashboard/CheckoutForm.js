@@ -11,7 +11,7 @@ const CheckoutForm = ({ data }) => {
   const { _id, TotalAmount, Email, UserName } = data;
 
   useEffect(() => {
-    fetch("https://spare-parts-server.vercel.app/create-payment-intent", {
+    fetch("https://spare-parts.onrender.com/create-payment-intent", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -75,7 +75,7 @@ const CheckoutForm = ({ data }) => {
         transaction: paymentIntent.id,
       };
 
-      fetch(`https://spare-parts-server.vercel.app/userproducts/${_id}`, {
+      fetch(`https://spare-parts.onrender.com/userproducts/${_id}`, {
         method: "PATCH",
         headers: {
           "content-type": "application/json",

@@ -29,7 +29,7 @@ const AddReview = () => {
             Date: today,
           };
 
-          const url = "https://spare-parts-server.vercel.app/review";
+          const url = "https://spare-parts.onrender.com/review";
           fetch(url, {
             method: "POST",
             headers: {

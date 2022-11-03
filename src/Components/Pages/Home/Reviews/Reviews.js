@@ -3,12 +3,15 @@ import Review from './Review';
 
 const Reviews = () => {
     const [reviews, setReviews] = useState([])
+    const countReviews = reviews.slice(0, 3)
 
     useEffect( () =>{
-        fetch('https://spare-parts-server.vercel.app/review')
+        fetch('https://spare-parts.onrender.com/review')
         .then( res => res.json())
         .then(data => setReviews(data))
     },[])
+
+
 
     return (
         <div id='customer-reviews' className='mx-4 md:mx-8'>
@@ -18,7 +21,7 @@ const Reviews = () => {
             </div>
             <div className='mx-auto grid grid-cols-1 md:grid-cols-3 gap-4'>
                 {
-                  reviews.map( review => <Review
+                  countReviews?.map( review => <Review
                   
                     review={review}
                     key={review._id}
