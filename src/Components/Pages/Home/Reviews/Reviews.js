@@ -6,7 +6,7 @@ const Reviews = () => {
     const countReviews = reviews.slice(0, 3)
 
     useEffect( () =>{
-        fetch('https://spare-parts.onrender.com/review')
+        fetch('https://spare-parts-server-production.up.railway.app/review')
         .then( res => res.json())
         .then(data => setReviews(data))
     },[])

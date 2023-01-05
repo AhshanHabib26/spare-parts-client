@@ -36,7 +36,7 @@ const UpdateProfile = () => {
           };
           console.log(dataInfo);
 
-          const url = `https://spare-parts.onrender.com/userInfo/${userEmail}`;
+          const url = `https://spare-parts-server-production.up.railway.app/userInfo/${userEmail}`;
           fetch(url, {
             method: "PUT",
             headers: {

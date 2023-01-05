@@ -11,7 +11,7 @@ const CheckoutForm = ({ data }) => {
   const { _id, TotalAmount, Email, UserName } = data;
 
   useEffect(() => {
-    fetch("https://spare-parts.onrender.com/create-payment-intent", {
+    fetch("https://spare-parts-server-production.up.railway.app/create-payment-intent", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -75,7 +75,7 @@ const CheckoutForm = ({ data }) => {
         transaction: paymentIntent.id,
       };
 
-      fetch(`https://spare-parts.onrender.com/userproducts/${_id}`, {
+      fetch(`https://spare-parts-server-production.up.railway.app/userproducts/${_id}`, {
         method: "PATCH",
         headers: {
           "content-type": "application/json",

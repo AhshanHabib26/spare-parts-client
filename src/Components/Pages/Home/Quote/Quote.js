@@ -16,7 +16,7 @@ const Quote = () => {
       Qunatity: Qunatity,
     };
 
-    fetch("https://spare-parts.onrender.com/quote", {
+    fetch("https://spare-parts-server-production.up.railway.app/quote", {
       method: "POST",
       headers: {
         "content-type": "application/json",

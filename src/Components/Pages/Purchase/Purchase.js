@@ -12,7 +12,7 @@ const Purchase = () => {
   const buttonRef = useRef();
 
   useEffect(() => {
-    const url = `https://spare-parts.onrender.com/product/${id}`;
+    const url = `https://spare-parts-server-production.up.railway.app/product/${id}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setItem(data));
@@ -53,7 +53,7 @@ const Purchase = () => {
         TotalAmount: totalCost,
       };
 
-      fetch("https://spare-parts.onrender.com/userproducts", {
+      fetch("https://spare-parts-server-production.up.railway.app/userproducts", {
         method: "POST",
         headers: {
           "content-type": "application/json"

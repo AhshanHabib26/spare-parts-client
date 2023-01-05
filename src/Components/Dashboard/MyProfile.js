@@ -20,7 +20,7 @@ const MyProfile = () => {
   const userEmail = user?.email;
 
   useEffect(() => {
-    const url = `https://spare-parts.onrender.com/userInfo/${userEmail}`;
+    const url = `https://spare-parts-server-production.up.railway.app/userInfo/${userEmail}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setUserData(data));

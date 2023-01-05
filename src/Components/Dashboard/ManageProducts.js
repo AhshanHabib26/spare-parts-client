@@ -10,7 +10,7 @@ const ManageProducts = () => {
     error,
     data: products,
   } = useQuery("SparePartsData", () =>
-    fetch("https://spare-parts.onrender.com/product").then((res) =>
+    fetch("https://spare-parts-server-production.up.railway.app/product").then((res) =>
       res.json()
     )
   );
@@ -27,7 +27,7 @@ const ManageProducts = () => {
   const handleDelete = (id) =>{
     const procced = window.confirm('Are You Sure Want To Delete')
     if(procced){
-      const url = `https://spare-parts-server.vercel.app/product/${id}`
+      const url = `https://spare-parts-server-production.up.railway.app/product/${id}`
       fetch(url, {
         method: "DELETE",
       })

@@ -10,7 +10,7 @@ const Tools = () => {
     error,
     data: products,
   } = useQuery("SparePartsData", () =>
-    fetch("https://spare-parts.onrender.com/product").then((res) =>
+    fetch("https://spare-parts-server-production.up.railway.app/product").then((res) =>
       res.json()
     )
   );

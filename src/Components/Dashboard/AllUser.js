@@ -5,7 +5,7 @@ const AllUser = () => {
   const [users, setUsers] = useState([]);
 
  useEffect(() =>{
-    fetch("https://spare-parts.onrender.com/user", {
+    fetch("https://spare-parts-server-production.up.railway.app/user", {
         method: "GET",
         headers:{
             authorization: `Bearer ${localStorage.getItem('accessToken')}`

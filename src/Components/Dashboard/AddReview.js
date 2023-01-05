@@ -29,7 +29,7 @@ const AddReview = () => {
             Date: today,
           };
 
-          const url = "https://spare-parts.onrender.com/review";
+          const url = "https://spare-parts-server-production.up.railway.app/review";
           fetch(url, {
             method: "POST",
             headers: {

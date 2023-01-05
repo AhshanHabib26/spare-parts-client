@@ -5,7 +5,7 @@ const ManageOrder = () => {
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
-    fetch("https://spare-parts.onrender.com/userproducts")
+    fetch("https://spare-parts-server-production.up.railway.app/userproducts")
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, []);

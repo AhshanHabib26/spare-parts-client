@@ -46,7 +46,7 @@ const SignUp = () => {
       Email: data.Email,
     };
 
-    fetch("https://spare-parts.onrender.com/userInfo", {
+    fetch("https://spare-parts-server-production.up.railway.app/userInfo", {
       method: "POST",
       headers: {
         "content-type": "application/json",
